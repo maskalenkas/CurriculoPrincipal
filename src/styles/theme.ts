@@ -23,9 +23,9 @@ export default {
   },
   colors: {
     primary: '#F231A5',
-    secondary: '#3CD3C1',
+    secondary: '#757575',
     lightBg: '#F2F2F2',
-    mainBg: '#06092B',
+    mainBg: '#EFEFEF',
     white: '#FAFAFA',
     black: '#030517',
     lightGray: '#EAEAEA',
@@ -48,4 +48,4 @@ export default {
     modal: 40,
     alwaysOnTop: 50,
   },
-} as const;
+} as const
