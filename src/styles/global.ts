@@ -13,30 +13,31 @@ const GlobalStyles: GlobalStyleComponent<
   GlobalStylesProps,
   DefaultTheme
 > = createGlobalStyle`
-  @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local('Poppins Light'), local('Poppins-Light'),
-        url('/fonts/poppins-v12-latin-300.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Poppins Regular'), local('Poppins-Regular'),
-        url('/fonts/poppins-v12-latin-regular.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
-        url('/fonts/poppins-v12-latin-600.woff2') format('woff2');
-  }
+/* oswald-600 - latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/oswald-v36-latin-600.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/pt-sans-narrow-v12-latin-regular.woff2') format('woff2')
+}
+/* pt-sans-narrow-700 - latin */
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/pt-sans-narrow-v12-latin-700.woff2') format('woff2')
+}
+
   * {
     margin: 0;
     padding: 0;
