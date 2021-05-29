@@ -5,7 +5,7 @@ import { HeadingProps, LineColors } from '.'
 
 const wrapperModifiers = {
   small: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.medium};
+    font-size: ${theme.font.sizes.large};
     &::after {
       width: 3rem;
     }
