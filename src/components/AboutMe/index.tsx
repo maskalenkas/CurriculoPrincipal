@@ -19,6 +19,7 @@ const AboutMe = ({ image }: AboutMeProps) => (
       <Heading color="secondary" size="small">
         Web Developer
       </Heading>
+      <h1>Isso daqui é a fonte padrão</h1>
       {/* Texto */}
       <Heading size="small" color="black">
         Prazer, meu nome é Arthur Maskalenkas. Sou um Web Developer com 7 meses
