@@ -7,8 +7,12 @@ export default {
     radius: '0.4rem',
   },
   font: {
-    family:
-      "Oswald, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    family: {
+      oswald:
+        "Oswald, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      ptsams:
+        "PT Sans Narrow, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    },
     light: 400,
     normal: 600,
     bold: 700,
@@ -27,7 +31,7 @@ export default {
     lightBg: '#F2F2F2',
     mainBg: '#efefef',
     white: '#FAFAFA',
-    black: '#030517',
+    black: '#000000',
     lightGray: '#EAEAEA',
     gray: '#8F8F8F',
     darkGray: '#2E2F42',

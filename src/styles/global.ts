@@ -18,6 +18,7 @@ const GlobalStyles: GlobalStyleComponent<
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
   src: local(''),
        url('../fonts/oswald-v36-latin-600.woff2') format('woff2')
 }
@@ -26,6 +27,7 @@ const GlobalStyles: GlobalStyleComponent<
   font-family: 'PT Sans Narrow';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local(''),
        url('../fonts/pt-sans-narrow-v12-latin-regular.woff2') format('woff2')
 }
@@ -34,6 +36,7 @@ const GlobalStyles: GlobalStyleComponent<
   font-family: 'PT Sans Narrow';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local(''),
        url('../fonts/pt-sans-narrow-v12-latin-700.woff2') format('woff2')
 }
@@ -54,7 +57,7 @@ const GlobalStyles: GlobalStyleComponent<
       font-size: 62.5%;
     }
     body {
-      font-family: ${theme.font.family};
+      font-family: ${theme.font.family.ptsams};
       font-size: ${theme.font.sizes.medium};
       ${!removeBg &&
       css`
