@@ -41,9 +41,6 @@ describe('<Heading />', () => {
     })
   })
 
-  // letter spacings
-  // modos: title, subtitle, text
-
   it('deve renderizar o heading com uma fonte de texto', () => {
     renderWithTheme(<Heading asTextType="text">Won Games</Heading>)
 
