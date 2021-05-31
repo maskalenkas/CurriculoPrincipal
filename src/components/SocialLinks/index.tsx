@@ -7,6 +7,12 @@ const SocialLinks = () => (
     <S.IconWrapper>
       <Facebook />
     </S.IconWrapper>
+    <S.IconWrapper>
+      <Instagram />
+    </S.IconWrapper>
+    <S.IconWrapper>
+      <Linkedin />
+    </S.IconWrapper>
   </S.Wrapper>
 )
 

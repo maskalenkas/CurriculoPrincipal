@@ -1,14 +1,18 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div`
+  display: flex;
+`
 
 export const IconWrapper = styled.div`
-  width: 3.4rem;
-  height: 3.4rem;
-  cursor: pointer;
+  ${({ theme }) => css`
+    width: 3.4rem;
+    height: 3.4rem;
+    cursor: pointer;
 
-  &:hover {
-    color: red;
-    transition: 0.2s;
-  }
+    &:hover {
+      color: ${theme.colors.primary};
+      transition: 0.2s;
+    }
+  `}
 `
