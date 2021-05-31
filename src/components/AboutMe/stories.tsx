@@ -2,11 +2,14 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import AboutMe, { AboutMeProps } from '.'
 import { Container } from '../Container/index'
 
+import mock from './mock'
+
 export default {
   title: 'AboutMe',
   component: AboutMe,
   args: {
     image: '/img/fotocurrc.jpg',
+    data: mock,
   },
 } as Meta
 
