@@ -40,4 +40,43 @@ describe('<Heading />', () => {
       'font-weight': '700',
     })
   })
+
+  // letter spacings
+  // modos: title, subtitle, text
+
+  it('deve renderizar o heading com uma fonte de texto', () => {
+    renderWithTheme(<Heading asTextType="text">Won Games</Heading>)
+
+    expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyle({
+      'font-family':
+        "PT Sans Narrow,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif",
+      'font-size': '1.6rem',
+      color: '#000000',
+      'font-weight': 400,
+    })
+  })
+
+  it('deve renderizar o heading com uma fonte de titulo', () => {
+    renderWithTheme(<Heading asTextType="title">Won Games</Heading>)
+
+    expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyle({
+      'font-family':
+        "Oswald,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif",
+      'font-size': '4.0rem',
+      color: '#000000',
+      'font-weight': 600,
+    })
+  })
+
+  it('deve renderizar o heading com uma fonte de subtitlo', () => {
+    renderWithTheme(<Heading asTextType="subtitle">Won Games</Heading>)
+
+    expect(screen.getByRole('heading', { name: /won games/i })).toHaveStyle({
+      'font-family':
+        "PT Sans Narrow,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif",
+      'font-size': '2.0rem',
+      color: '#757575',
+      'font-weight': 400,
+    })
+  })
 })
