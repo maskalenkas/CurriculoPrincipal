@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.section`
   display: flex;
-  margin-top: 300px;
 `
 
 export type IconWrapperProps = {
@@ -12,20 +11,18 @@ export type IconWrapperProps = {
 export const IconWrapper = styled.div<IconWrapperProps>`
   ${({ theme, content }) => css`
     position: relative;
-    width: 3.4rem;
+    width: 2.4rem;
     cursor: pointer;
     color: ${theme.colors.secondary};
     box-sizing: content-box;
     padding: 0.6rem;
     border: 1px solid ${theme.colors.secondary};
     margin-right: ${theme.spacings.xsmall};
-
+    transition: background-color 0.5s;
     &:hover {
       background-color: ${theme.colors.primary};
       color: ${theme.colors.white};
-      transition: all 0.5s;
     }
-
     &:hover:before {
       content: 'facebook';
       position: absolute;

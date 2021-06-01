@@ -1,6 +1,11 @@
 import * as S from './styles'
 
-import { Facebook, Instagram, Linkedin } from '@styled-icons/boxicons-logos'
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Github,
+} from '@styled-icons/boxicons-logos'
 
 const SocialLinks = () => (
   <S.Wrapper>
@@ -14,6 +19,10 @@ const SocialLinks = () => (
 
     <S.IconWrapper content="Linkedin">
       <Linkedin aria-label="icone do Linkedin" />
+    </S.IconWrapper>
+
+    <S.IconWrapper content="Github">
+      <Github aria-label="icone do Github" />
     </S.IconWrapper>
   </S.Wrapper>
 )

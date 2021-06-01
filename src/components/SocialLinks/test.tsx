@@ -1,13 +1,10 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/tests/helpers'
 
-import SocialLinks from '.';
+import SocialLinks from '.'
 
 describe('<SocialLinks />', () => {
   it('should render the heading', () => {
-    const { container } = render(<SocialLinks />)
-
-    expect(screen.getByRole('heading', { name: /SocialLinks/i })).toBeInTheDocument()
-
-    expect(container.firstChild).toMatchSnapshot()
-  });
-});
+    const { container } = renderWithTheme(<SocialLinks />)
+  })
+})

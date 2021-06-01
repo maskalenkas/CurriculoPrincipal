@@ -37,9 +37,14 @@ export const Data = styled.div`
   }
 `
 
-export const Column = styled.div`
-  ${({ theme }) => css`
+export type ColumnProps = {
+  displayColumn?: boolean
+}
+
+export const Column = styled.div<ColumnProps>`
+  ${({ theme, displayColumn }) => css`
     display: flex;
+    ${displayColumn && 'flex-direction: column'};
     padding-bottom: ${theme.spacings.xxsmall};
   `}
 `

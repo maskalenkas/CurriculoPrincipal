@@ -44,6 +44,7 @@ const wrapperModifiers = {
 export const Wrapper = styled.h2<HeadingProps>`
   ${({ theme, color, size, weight, asTextType }) => css`
     letter-spacing: 0.5px;
+    text-align: justify;
     color: ${theme.colors[color!]};
     ${!!size && wrapperModifiers[size](theme)}
     ${!!weight && wrapperModifiers.weights(theme, weight)}
