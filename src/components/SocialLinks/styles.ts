@@ -1,18 +1,38 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
+  margin-top: 300px;
 `
 
-export const IconWrapper = styled.div`
-  ${({ theme }) => css`
+export type IconWrapperProps = {
+  content: string
+}
+
+export const IconWrapper = styled.div<IconWrapperProps>`
+  ${({ theme, content }) => css`
+    position: relative;
     width: 3.4rem;
-    height: 3.4rem;
     cursor: pointer;
+    color: ${theme.colors.secondary};
+    box-sizing: content-box;
+    padding: 0.6rem;
+    border: 1px solid ${theme.colors.secondary};
+    margin-right: ${theme.spacings.xsmall};
 
     &:hover {
-      color: ${theme.colors.primary};
-      transition: 0.2s;
+      background-color: ${theme.colors.primary};
+      color: ${theme.colors.white};
+      transition: all 0.5s;
+    }
+
+    &:hover:before {
+      content: 'facebook';
+      position: absolute;
+      padding: 5px;
+      background: black;
+      margin-top: -40px;
+      left: 0;
     }
   `}
 `
