@@ -5,6 +5,10 @@ import SocialLinks from '.'
 
 describe('<SocialLinks />', () => {
   it('should render the heading', () => {
-    const { container } = renderWithTheme(<SocialLinks />)
+    const { container, debug } = renderWithTheme(<SocialLinks />)
+
+    expect(screen.getByLabelText(/facebook/i)).toBeInTheDocument()
+    expect(screen.getByLabelText(/instagram/i)).toBeInTheDocument()
+    expect(screen.getByLabelText(/linkedin/i)).toBeInTheDocument()
   })
 })
