@@ -1,0 +1,4 @@
+- Espaçamentos
+- Nome em azul
+- subtitulo com weight
+- Editar a foto
