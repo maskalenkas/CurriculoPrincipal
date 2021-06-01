@@ -11,6 +11,7 @@ export type HeadingProps = {
   size?: sizeTypes
   weight?: weightTypes
   asTextType?: asTypes
+  isBlue?: boolean
 }
 
 const Heading = ({
@@ -19,8 +20,15 @@ const Heading = ({
   size = 'medium',
   weight = 'light',
   asTextType,
+  isBlue,
 }: HeadingProps) => (
-  <S.Wrapper color={color} size={size} weight={weight} asTextType={asTextType}>
+  <S.Wrapper
+    color={color}
+    size={size}
+    weight={weight}
+    asTextType={asTextType}
+    isBlue={isBlue}
+  >
     {children}
   </S.Wrapper>
 )
