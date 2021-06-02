@@ -32,7 +32,7 @@ const AboutMe = ({ image, data }: AboutMeProps) => (
         </Heading>
 
         <S.Data aria-label="Varias colunas com informações sobre o Arthur">
-          {data!.map((d) => (
+          {data?.map((d) => (
             <S.Column key={d.coluna} className="coluna">
               <Heading asTextType="subtitle">{d.coluna}</Heading>
               <Heading asTextType="text">{d.data}</Heading>

@@ -1,7 +1,14 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 import media from 'styled-media-query'
 
-import { asTypes, colorTypes, HeadingProps, sizeTypes, weightTypes } from '.'
+import {
+  asTypes,
+  colorTypes,
+  fontTypes,
+  HeadingProps,
+  sizeTypes,
+  weightTypes,
+} from '.'
 
 // tipos da função que vai criar os estilos padrões
 type fontFamilyProps = 'ptsams' | 'oswald'
@@ -53,16 +60,21 @@ const wrapperModifiers = {
   weight: (theme: DefaultTheme, weight: weightTypes) => css`
     font-weight: ${theme.font[weight]};
   `,
+
+  font: (theme: DefaultTheme, font: fontTypes) => css`
+    font-family: ${theme.font.family[font]};
+  `,
 }
 
 export const Wrapper = styled.h2<HeadingProps>`
-  ${({ theme, asTextType, size, color, weight }) => css`
+  ${({ theme, asTextType, size, color, weight, font }) => css`
     ${!!asTextType && wrapperModifiers.asType(theme, asTextType)}
 
     // Depois vem o customizavel
     ${!!size && wrapperModifiers.size(theme, size)}
     ${!!color && wrapperModifiers.colors(theme, color)}
     ${!!weight && wrapperModifiers.weight(theme, weight)}
+    ${!!font && wrapperModifiers.font(theme, font)}
 
     letter-spacing: 0.5px;
     text-align: justify;
