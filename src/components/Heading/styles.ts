@@ -1,57 +1,70 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 import media from 'styled-media-query'
 
-import { HeadingProps, weightTypes } from '.'
+import { asTypes, colorTypes, HeadingProps, sizeTypes, weightTypes } from '.'
+
+// tipos da função que vai criar os estilos padrões
+type fontFamilyProps = 'ptsams' | 'oswald'
+type fontSizeProps = 'xxxlarge' | 'xlarge' | 'medium'
+type fontWeightProps = 'light' | 'normal'
+
+// Função que vai ser chamada para fazer os estilos padrões
+const autoStyle = (
+  theme: DefaultTheme,
+  fontFamily: fontFamilyProps,
+  fontSize: fontSizeProps,
+  fontWeight: fontWeightProps,
+) => css`
+  font-family: ${theme.font.family[fontFamily]};
+  font-size: ${theme.font.sizes[fontSize]};
+  font-weight: ${theme.font[fontWeight]};
+`
 
 const wrapperModifiers = {
-  small: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.medium};
-    &::after {
-      width: 3rem;
-    }
+  asType: (theme: DefaultTheme, typeText: asTypes) => css`
+    ${typeText == 'text' &&
+    css`
+      ${autoStyle(theme, 'ptsams', 'medium', 'light')}
+      line-height: ${theme.spacings.small};
+    `}
+
+    ${typeText == 'title' &&
+    css`
+      ${autoStyle(theme, 'oswald', 'xxxlarge', 'normal')}
+      text-transform: uppercase;
+      color: ${theme.colors.black};
+    `}
+
+    ${typeText == 'subtitle' &&
+    css`
+      ${autoStyle(theme, 'ptsams', 'xlarge', 'light')}
+      color: ${theme.colors.secondary};
+    `}
   `,
 
-  medium: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.xlarge};
+  size: (theme: DefaultTheme, size: sizeTypes) => css`
+    font-size: ${theme.font.sizes[size]};
   `,
 
-  weights: (theme: DefaultTheme, weight: weightTypes) => css`
+  colors: (theme: DefaultTheme, color: colorTypes) => css`
+    color: ${theme.colors[color]};
+  `,
+
+  weight: (theme: DefaultTheme, weight: weightTypes) => css`
     font-weight: ${theme.font[weight]};
-  `,
-
-  text: (theme: DefaultTheme) => css`
-    font-family: ${theme.font.family.ptsams};
-    font-size: ${theme.font.sizes.medium};
-    line-height: ${theme.spacings.small};
-    color: ${theme.colors.black};
-    font-weight: ${theme.font.light};
-  `,
-  title: (theme: DefaultTheme) => css`
-    font-family: ${theme.font.family.oswald};
-    font-size: ${theme.font.sizes.xxxlarge};
-    text-transform: uppercase;
-    color: ${theme.colors.black};
-    font-weight: ${theme.font.normal};
-  `,
-  subtitle: (theme: DefaultTheme) => css`
-    font-family: ${theme.font.family.ptsams};
-    font-size: ${theme.font.sizes.xlarge};
-    color: ${theme.colors.secondary};
-    font-weight: ${theme.font.light};
-  `,
-  isBlue: (theme: DefaultTheme) => css`
-    color: ${theme.colors.primary};
   `,
 }
 
 export const Wrapper = styled.h2<HeadingProps>`
-  ${({ theme, color, size, weight, asTextType, isBlue }) => css`
+  ${({ theme, asTextType, size, color, weight }) => css`
+    ${!!asTextType && wrapperModifiers.asType(theme, asTextType)}
+
+    // Depois vem o customizavel
+    ${!!size && wrapperModifiers.size(theme, size)}
+    ${!!color && wrapperModifiers.colors(theme, color)}
+    ${!!weight && wrapperModifiers.weight(theme, weight)}
+
     letter-spacing: 0.5px;
     text-align: justify;
-    color: ${theme.colors[color!]};
-    ${!!size && wrapperModifiers[size](theme)}
-    ${!!weight && wrapperModifiers.weights(theme, weight)}
-    ${!!asTextType && wrapperModifiers[asTextType](theme)}
-    ${!!isBlue && wrapperModifiers.isBlue(theme)}
   `}
 `

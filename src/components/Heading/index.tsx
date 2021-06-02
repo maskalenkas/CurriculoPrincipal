@@ -1,34 +1,26 @@
 import * as S from './styles'
 
-export type colorTypes = 'primary' | 'secondary' | 'black'
-export type sizeTypes = 'small' | 'medium'
+export type colorTypes = 'primary' | 'secondary' | 'black' | 'gray' | 'darkGray'
+export type sizeTypes = 'small' | 'medium' | 'xlarge' | 'xxlarge'
 export type weightTypes = 'light' | 'normal' | 'bold'
 export type asTypes = 'text' | 'title' | 'subtitle'
 
 export type HeadingProps = {
-  children: React.ReactNode
-  color?: colorTypes
-  size?: sizeTypes
-  weight?: weightTypes
   asTextType?: asTypes
-  isBlue?: boolean
+  children: React.ReactNode
+  size?: sizeTypes
+  color?: colorTypes
+  weight?: weightTypes
 }
 
 const Heading = ({
   children,
-  color = 'black',
-  size = 'medium',
-  weight = 'light',
-  asTextType,
-  isBlue,
+  asTextType = 'text',
+  size,
+  color,
+  weight,
 }: HeadingProps) => (
-  <S.Wrapper
-    color={color}
-    size={size}
-    weight={weight}
-    asTextType={asTextType}
-    isBlue={isBlue}
-  >
+  <S.Wrapper asTextType={asTextType} size={size} color={color} weight={weight}>
     {children}
   </S.Wrapper>
 )
