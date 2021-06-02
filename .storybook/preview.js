@@ -4,14 +4,14 @@ import theme from 'styles/theme'
 
 export const parameters = {
   backgrounds: {
-    default: 'won-light',
+    default: 'light',
     values: [
       {
-        name: 'won-light',
-        value: theme.colors.white
+        name: 'light',
+        value: theme.colors.mainBg
       },
       {
-        name: 'won-dark',
+        name: 'dark',
         value: theme.colors.mainBg
       }
     ]
