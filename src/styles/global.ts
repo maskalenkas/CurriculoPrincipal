@@ -24,6 +24,27 @@ const GlobalStyles: GlobalStyleComponent<
 }
 
 @font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/oswald-v36-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/oswald-v36-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/oswald-v36-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/oswald-v36-latin-700.woff2') format('woff2'),
+}
+
+
+@font-face {
   font-family: 'PT Sans Narrow';
   font-style: normal;
   font-weight: 400;
