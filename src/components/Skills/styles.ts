@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 
 import { StyledIconBase } from '@styled-icons/styled-icon'
 
@@ -10,6 +10,8 @@ import {
   ReactLogo,
   Bootstrap,
 } from '@styled-icons/boxicons-logos'
+
+import { Wrapper as HeadingStyle } from 'components/Heading/styles'
 
 import {
   Testinglibrary,
@@ -28,14 +30,11 @@ export const Wrapper = styled.main`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-
-
-  ${StyledIconBase} {
-    width: 10rem;
-    
+    display: grid;
+    gap: 5rem 0;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
   `};
 `
 
@@ -47,6 +46,36 @@ export const Title = styled.div`
     top: -4rem;
     padding: 1.8rem 2.8rem;
     background-color: ${theme.colors.primary};
+  `}
+`
+
+const IconWrapperModifiers = {
+  size: (theme: DefaultTheme, iconSize: string) => css`
+    width: ${iconSize};
+  `,
+}
+
+export type IconWrapperProps = {
+  iconSize?: string
+}
+
+export const IconWrapper = styled.div<IconWrapperProps>`
+  ${({ theme, iconSize }) => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    ${HeadingStyle} {
+      font-size: ${theme.font.sizes.xxlarge};
+      margin-top: 1.5rem;
+    }
+
+    // Testar
+    ${StyledIconBase} {
+      width: 10rem;
+      ${!!iconSize && IconWrapperModifiers.size(theme, iconSize)}
+    }
   `}
 `
 
