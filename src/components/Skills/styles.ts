@@ -18,6 +18,7 @@ import {
   Cypress,
   StyledComponents,
 } from '@styled-icons/simple-icons'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
@@ -25,16 +26,27 @@ export const Wrapper = styled.main`
     position: relative;
     padding: 3.5rem 3rem 3rem 3rem;
     background: ${theme.colors.white};
+
+    ${media.lessThan('medium')`
+      padding: 8.5rem 0 3.5rem 0;
+
+      margin-left: -${theme.grid.gutter};
+      margin-right: -${theme.grid.gutter};
+    `}
   `}
 `
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    display: grid;
     gap: 5rem 0;
     grid-template-columns: repeat(3, 1fr);
+    display: grid;
     justify-items: center;
     align-items: center;
+
+    ${media.lessThan('medium')`
+      grid-template-columns: repeat(2, 1fr)
+    `}
   `};
 `
 
@@ -46,6 +58,14 @@ export const Title = styled.div`
     top: -4rem;
     padding: 1.8rem 2.8rem;
     background-color: ${theme.colors.primary};
+
+    ${HeadingStyle} {
+      text-align: center;
+    }
+
+    ${media.lessThan('medium')`
+      padding: 0.5rem 3.5rem
+    `}
   `}
 `
 
@@ -65,16 +85,29 @@ export const IconWrapper = styled.div<IconWrapperProps>`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     ${HeadingStyle} {
       font-size: ${theme.font.sizes.xxlarge};
       margin-top: 1.5rem;
+      text-align: center;
     }
 
     ${StyledIconBase} {
-      width: 10rem;
+      width: 15rem;
       ${!!iconSize && IconWrapperModifiers.size(theme, iconSize)}
     }
+
+    ${media.lessThan('medium')`
+      ${StyledIconBase} {
+        width: 10rem;
+      }
+
+      & > ${CypressWrapper} {
+        width: 8rem;
+
+      }
+    `}
   `}
 `
 
@@ -105,4 +138,7 @@ export const TestingLibraryWrapper = styled(Testinglibrary)`
 
 export const CypressWrapper = styled(Cypress)`
   color: #59595b;
+  & + ${HeadingStyle} {
+    padding-top: 1.7rem;
+  }
 `

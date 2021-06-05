@@ -30,7 +30,7 @@ const Skills = () => (
         <S.HTMLWrapper aria-label="Icone do HTML5" />
         <Heading>HTML5</Heading>
       </S.IconWrapper>
-      <S.IconWrapper iconSize="8rem">
+      <S.IconWrapper iconSize="12rem">
         <S.CypressWrapper aria-label="Icone do Cypress" />
         <Heading>Cypress</Heading>
       </S.IconWrapper>
@@ -42,14 +42,17 @@ const Skills = () => (
         <S.CSSWrapper aria-label="Icone do CSS3" />
         <Heading>CSS3</Heading>
       </S.IconWrapper>
+
       <S.IconWrapper>
         <S.ReactWrapper aria-label="Icone do React" />
         <Heading>React</Heading>
       </S.IconWrapper>
+
       <S.IconWrapper>
         <S.TestingLibraryWrapper aria-label="Icone da TestingLibrary" />
         <Heading>Testing Library</Heading>
       </S.IconWrapper>
+
       <S.IconWrapper>
         <S.BootstrapWrapper aria-label="Icone do Bootstrap" />
         <Heading>Bootstrap</Heading>
