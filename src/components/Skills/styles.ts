@@ -71,7 +71,6 @@ export const IconWrapper = styled.div<IconWrapperProps>`
       margin-top: 1.5rem;
     }
 
-    // Testar
     ${StyledIconBase} {
       width: 10rem;
       ${!!iconSize && IconWrapperModifiers.size(theme, iconSize)}
