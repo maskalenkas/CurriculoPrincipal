@@ -23,13 +23,20 @@ export const IconWrapper = styled.div<IconWrapperProps>`
       background-color: ${theme.colors.primary};
       color: ${theme.colors.white};
     }
-    &:hover:before {
-      content: 'facebook';
+    // O span inicia vazio
+    span {
       position: absolute;
+      opacity: 0;
+    }
+
+    // Fazendo o span aparecer
+    &:hover span {
+      opacity: 1;
       padding: 5px;
       background: black;
-      margin-top: -40px;
+      margin-top: -4.5rem;
       left: 0;
+      transition: all 0.3s;
     }
   `}
 `
