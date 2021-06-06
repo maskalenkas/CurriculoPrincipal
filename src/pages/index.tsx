@@ -1,6 +1,6 @@
-import Home, { HomeTemplateProps } from 'templates/Home';
+import Home, { HomeTemplateProps } from 'templates/Home'
 export default function Index(props: HomeTemplateProps) {
-  return <Home {...props} />;
+  return <Home {...props} />
 }
 
 export function getStaticProps() {
@@ -14,5 +14,5 @@ export function getStaticProps() {
       title: 'React avançado',
       description: 'TypeScript, ReactJS, NextJS e Styled Components',
     },
-  };
+  }
 }
