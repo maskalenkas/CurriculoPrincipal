@@ -1,11 +1,9 @@
 export default [
   {
     img: 'https://source.unsplash.com/user/willianjusten/1042x580',
-    title: 'Defy death 1',
-    subtitle: '<p>Play the new <strong>CrashLands</strong> season',
-    buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death',
-    ribbon: 'Bestselling',
+    title: 'Netflix',
+    subtitle: 'Isso é uma copia da pagina principal da Netflix',
+    buttonLabel: 'Veja!',
   },
   {
     img: 'https://source.unsplash.com/user/willianjusten/1042x582',
