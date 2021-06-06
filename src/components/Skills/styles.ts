@@ -1,3 +1,5 @@
+// O cypress sempre vai ter um width menor
+
 import styled, { css, DefaultTheme } from 'styled-components'
 
 import { StyledIconBase } from '@styled-icons/styled-icon'
@@ -13,11 +15,7 @@ import {
 
 import { Wrapper as HeadingStyle } from 'components/Heading/styles'
 
-import {
-  Testinglibrary,
-  Cypress,
-  StyledComponents,
-} from '@styled-icons/simple-icons'
+import { Testinglibrary, Cypress } from '@styled-icons/simple-icons'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
