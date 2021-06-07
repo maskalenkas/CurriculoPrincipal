@@ -4,12 +4,8 @@ export const Wrapper = styled.section`
   display: flex;
 `
 
-export type IconWrapperProps = {
-  content: string
-}
-
-export const IconWrapper = styled.div<IconWrapperProps>`
-  ${({ theme, content }) => css`
+export const IconWrapper = styled.div`
+  ${({ theme }) => css`
     position: relative;
     width: 2.4rem;
     cursor: pointer;
