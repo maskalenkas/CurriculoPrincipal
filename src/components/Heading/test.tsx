@@ -77,4 +77,14 @@ describe('<Heading />', () => {
       'font-weight': 600,
     })
   })
+
+  it('deve renderizar o heading com um padding', () => {
+    const { container, debug } = renderWithTheme(
+      <Heading marginBottom="small">Texto</Heading>,
+    )
+
+    expect(screen.getByRole('heading', { name: /texto/i })).toHaveStyle({
+      'margin-bottom': '2.4rem',
+    })
+  })
 })
