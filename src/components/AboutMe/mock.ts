@@ -19,8 +19,4 @@ export default [
     coluna: 'website',
     data: 'www.maskalenkas.com.br',
   },
-  {
-    coluna: 'Exigencias',
-    data: 'www.maskalenkas.com.br',
-  },
 ]
