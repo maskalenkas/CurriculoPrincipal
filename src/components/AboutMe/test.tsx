@@ -23,6 +23,6 @@ describe('<AboutMe />', () => {
     ).toBeInTheDocument()
 
     // Testando se de fato tem 6 colunas
-    expect(container.querySelectorAll('.coluna')).toHaveLength(6)
+    expect(container.querySelectorAll('.coluna')).toHaveLength(5)
   })
 })

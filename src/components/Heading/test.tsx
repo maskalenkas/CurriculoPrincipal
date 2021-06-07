@@ -25,7 +25,7 @@ describe('<Heading />', () => {
     expect(screen.getByRole('heading', { name: /texto/i })).toHaveStyle({
       'font-family':
         "Oswald,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif",
-      'font-size': '4.0rem',
+      'font-size': '3.5rem',
       'font-weight': 600,
     })
   })
