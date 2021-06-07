@@ -7,14 +7,9 @@ import {
   Github,
   Whatsapp,
 } from '@styled-icons/boxicons-logos'
-import { ButtonProps } from 'components/Button'
-
-export type SocialLinkProps = {
-  as?: React.ElementType
-} & ButtonProps
 
 // É que elemento? é um a, e ele pode receber o que? as props de A
-const SocialLinks = ({ as, ...props }: SocialLinkProps) => (
+const SocialLinks = () => (
   <S.Wrapper>
     <S.IconWrapper as="a" href="https://www.facebook.com/arthur.maskalenkas">
       <Facebook aria-label="icone do Facebook" />
