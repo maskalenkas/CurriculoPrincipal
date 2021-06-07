@@ -28,8 +28,8 @@ export const Wrapper = styled.main`
     ${media.lessThan('medium')`
       padding: 8.5rem 0 3.5rem 0;
 
-      margin-left: -${theme.grid.gutter};
-      margin-right: -${theme.grid.gutter};
+      margin-left: -4.2rem;
+      margin-right: -4.2rem;
     `}
   `}
 `
@@ -56,6 +56,7 @@ export const Title = styled.div`
     top: -4rem;
     padding: 1.8rem 2.8rem;
     background-color: ${theme.colors.primary};
+    cursor: pointer;
 
     ${HeadingStyle} {
       text-align: center;
@@ -91,9 +92,17 @@ export const IconWrapper = styled.div<IconWrapperProps>`
       text-align: center;
     }
 
+    /* Selecionando todos os icones */
     ${StyledIconBase} {
       width: 15rem;
       ${!!iconSize && IconWrapperModifiers.size(theme, iconSize)}
+      transition: all 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+        transition: all 0.2s;
+      }
     }
 
     ${media.lessThan('medium')`
