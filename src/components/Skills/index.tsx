@@ -17,7 +17,7 @@ const Skills = () => (
         weight="light"
         size="xxlarge"
       >
-        MINHAS SKILLS
+        SKILLS
       </Heading>
     </S.Title>
 

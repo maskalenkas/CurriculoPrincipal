@@ -1,38 +1,26 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.main`
+import * as HeadingStyles from 'components/Heading/styles'
+import { Container } from 'components/Container/'
+
+export const Sections = styled.section`
   ${({ theme }) => css`
-    background-color: ${theme.colors.mainBg};
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    padding: 3rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    & > ${Container} {
+      margin-top: 10rem;
+
+      & > ${HeadingStyles.Wrapper} {
+        text-align: center;
+        margin-bottom: 6rem;
+      }
+    }
+
+    & > ${Container}:first-child {
+      margin-top: 3rem;
+    }
   `}
 `
 
-export const Logo = styled.img`
-  width: 25rem;
-  margin-bottom: 2rem;
-`
-
-export const Title = styled.h1`
-  ${({ theme }) => css`
-    font-size: 2.5rem;
-    color: ${theme.colors.primary};
-  `}
-`
-
-export const Description = styled.h2`
-  font-size: 2rem;
-  font-weight: 400;
-`
-
-export const Illustration = styled.img`
-  margin-top: 3rem;
-  width: min(30rem, 100%);
-`
+export const SectionAboutMe = styled.section``
+export const SectionPortfolio = styled.section``
+export const SectionSkills = styled.section``
+export const SectionContact = styled.section``

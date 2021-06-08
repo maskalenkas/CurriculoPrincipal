@@ -28,19 +28,21 @@ const AboutMe = ({ image, data }: AboutMeProps) => (
           Web Developer
         </Heading>
         <Heading asTextType="text" marginBottom="small">
-          Prazer, meu nome é Arthur Maskalenkas. Sou um Web Developer com 7
-          meses de aprendizados constantes. Tenho bastante conhecimento em
-          HTML5, CSS, JavaScript, React, NextJS, testes unitarios e outras
-          diversas bibliotecas. O meu aprendizado é constante, e as experiencias
-          não vividas ainda são compensadas com uma força de vontade enorme em
-          aprender e ser melhor que eu mesmo.
+          Prazer, meu nome é Arthur Maskalenkas. Sou um Web Developer com 10
+          meses de aprendizado. Tenho bastante conhecimento em HTML5, CSS,
+          JavaScript, React, NextJS, testes unitarios e outras diversas
+          bibliotecas/frameworks. O meu aprendizado é constante, e a falta de
+          experiencia é compensada com uma força de vontade enorme em aprender e
+          ser melhor que eu mesmo.
         </Heading>
       </S.Biography>
 
       <S.Data aria-label="Varias colunas com informações sobre o Arthur">
         {data?.map((d) => (
           <S.Column key={d.coluna} className="coluna">
-            <Heading asTextType="subtitle">{d.coluna}</Heading>
+            <Heading asTextType="subtitle" size="medium">
+              {d.coluna}
+            </Heading>
             <Heading asTextType="text">{d.data}</Heading>
           </S.Column>
         ))}

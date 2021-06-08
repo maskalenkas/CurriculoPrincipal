@@ -11,7 +11,7 @@ export default [
     img: '/img/wonGames.png',
     title: 'Ecommerce WonGames',
     subtitle:
-      'É um Ecommerce feito em NextJs super escalavel e completo. Atualmente em desenvolvimento.',
+      'É um Ecommerce feito em NextJs, com testes unitarios, end-to-end e super completo. Atualmente em desenvolvimento.',
     buttonLabel: 'Veja!',
     buttonLink: 'https://github.com/maskalenkas/WonGames',
   },
