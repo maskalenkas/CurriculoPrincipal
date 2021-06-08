@@ -8,6 +8,7 @@ import mockSlider from 'components/BannerSlider/mock'
 import mockAboutMe from 'components/AboutMe/mock'
 
 import Heading from 'components/Heading'
+import Contact from 'components/Contact'
 
 const Home = () => (
   <S.Sections>
@@ -35,9 +36,17 @@ const Home = () => (
       </S.SectionSkills>
     </Container>
 
-    <Container>
-      <S.SectionContact></S.SectionContact>
-    </Container>
+    <S.SectionContact>
+      <Heading asTextType="title" color="primary" weight="light">
+        CONTATO
+      </Heading>
+
+      <S.MarkBg>
+        <Container>
+          <Contact />
+        </Container>
+      </S.MarkBg>
+    </S.SectionContact>
   </S.Sections>
 )
 
