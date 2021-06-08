@@ -1,24 +1,53 @@
+import AboutMe from 'components/AboutMe'
+import BannerSlider from 'components/BannerSlider'
+import { Container } from 'components/Container'
+import Skills from 'components/Skills'
 import * as S from './styles'
 
-export type HomeTemplateProps = {
-  title?: string
-  description?: string
-}
+import mockSlider from 'components/BannerSlider/mock'
+import mockAboutMe from 'components/AboutMe/mock'
 
-// Recebendo as props do NEXT
-const Home = ({ title, description }: HomeTemplateProps) => (
-  <S.Wrapper>
-    <S.Logo
-      src="/img/logo.svg"
-      alt="Imagem de um átomo e React Avançado escrito ao lado."
-    />
-    <S.Title>{title}</S.Title>
-    <S.Description>{description}</S.Description>
-    <S.Illustration
-      src="/img/hero-illustration.svg"
-      alt="Um desenvolvedor de frente para uma tela com código."
-    />
-  </S.Wrapper>
+import Heading from 'components/Heading'
+import Contact from 'components/Contact'
+
+const Home = () => (
+  <S.Sections>
+    <Container>
+      <S.SectionAboutMe>
+        <AboutMe image="/img/fotocurrc.jpg" data={mockAboutMe} />
+      </S.SectionAboutMe>
+    </Container>
+
+    <Container>
+      <Heading asTextType="title" color="primary" weight="light">
+        Meus projetos
+      </Heading>
+      <S.SectionPortfolio>
+        <BannerSlider items={mockSlider} />
+      </S.SectionPortfolio>
+    </Container>
+
+    <Container>
+      <Heading asTextType="title" color="primary" weight="light">
+        Minhas habilidades
+      </Heading>
+      <S.SectionSkills>
+        <Skills />
+      </S.SectionSkills>
+    </Container>
+
+    <S.SectionContact>
+      <Heading asTextType="title" color="primary" weight="light">
+        CONTATO
+      </Heading>
+
+      <S.MarkBg>
+        <Container>
+          <Contact />
+        </Container>
+      </S.MarkBg>
+    </S.SectionContact>
+  </S.Sections>
 )
 
 export default Home

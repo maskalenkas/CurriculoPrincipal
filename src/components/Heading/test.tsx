@@ -25,7 +25,7 @@ describe('<Heading />', () => {
     expect(screen.getByRole('heading', { name: /texto/i })).toHaveStyle({
       'font-family':
         "Oswald,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif",
-      'font-size': '4.0rem',
+      'font-size': '3.5rem',
       'font-weight': 600,
     })
   })
@@ -75,6 +75,16 @@ describe('<Heading />', () => {
 
     expect(screen.getByRole('heading', { name: /texto/i })).toHaveStyle({
       'font-weight': 600,
+    })
+  })
+
+  it('deve renderizar o heading com um padding', () => {
+    const { container, debug } = renderWithTheme(
+      <Heading marginBottom="small">Texto</Heading>,
+    )
+
+    expect(screen.getByRole('heading', { name: /texto/i })).toHaveStyle({
+      'margin-bottom': '2.4rem',
     })
   })
 })

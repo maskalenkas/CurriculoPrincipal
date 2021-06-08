@@ -28,8 +28,8 @@ export const Wrapper = styled.main`
     ${media.lessThan('medium')`
       padding: 8.5rem 0 3.5rem 0;
 
-      margin-left: -${theme.grid.gutter};
-      margin-right: -${theme.grid.gutter};
+      margin-left: -4.2rem;
+      margin-right: -4.2rem;
     `}
   `}
 `
@@ -56,6 +56,7 @@ export const Title = styled.div`
     top: -4rem;
     padding: 1.8rem 2.8rem;
     background-color: ${theme.colors.primary};
+    cursor: pointer;
 
     ${HeadingStyle} {
       text-align: center;
@@ -80,6 +81,7 @@ export type IconWrapperProps = {
 export const IconWrapper = styled.div<IconWrapperProps>`
   ${({ theme, iconSize }) => css`
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -89,11 +91,42 @@ export const IconWrapper = styled.div<IconWrapperProps>`
       font-size: ${theme.font.sizes.xxlarge};
       margin-top: 1.5rem;
       text-align: center;
+      cursor: pointer;
     }
 
+    ${HeadingStyle}:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      height: 1em;
+      width: 100%;
+      border-bottom: 1px solid;
+      margin-top: 10px;
+      opacity: 0;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: scale(0, 1);
+      transform: scale(0, 1);
+    }
+
+    ${HeadingStyle}:hover:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    /* Selecionando todos os icones */
     ${StyledIconBase} {
       width: 15rem;
       ${!!iconSize && IconWrapperModifiers.size(theme, iconSize)}
+      transition: all 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+        transition: all 0.2s;
+      }
     }
 
     ${media.lessThan('medium')`

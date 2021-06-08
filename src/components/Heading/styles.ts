@@ -6,6 +6,7 @@ import {
   colorTypes,
   fontTypes,
   HeadingProps,
+  marginBottomTypes,
   sizeTypes,
   weightTypes,
 } from '.'
@@ -40,6 +41,7 @@ const wrapperModifiers = {
       ${autoStyle(theme, 'oswald', 'xxxlarge', 'normal')}
       text-transform: uppercase;
       color: ${theme.colors.black};
+      line-height: 1.1;
     `}
 
     ${typeText == 'subtitle' &&
@@ -64,10 +66,14 @@ const wrapperModifiers = {
   font: (theme: DefaultTheme, font: fontTypes) => css`
     font-family: ${theme.font.family[font]};
   `,
+
+  padding: (theme: DefaultTheme, marginBottom: marginBottomTypes) => css`
+    margin-bottom: ${theme.spacings[marginBottom]};
+  `,
 }
 
 export const Wrapper = styled.h2<HeadingProps>`
-  ${({ theme, asTextType, size, color, weight, font }) => css`
+  ${({ theme, asTextType, size, color, weight, font, marginBottom }) => css`
     ${!!asTextType && wrapperModifiers.asType(theme, asTextType)}
 
     // Depois vem o customizavel
@@ -75,6 +81,7 @@ export const Wrapper = styled.h2<HeadingProps>`
     ${!!color && wrapperModifiers.colors(theme, color)}
     ${!!weight && wrapperModifiers.weight(theme, weight)}
     ${!!font && wrapperModifiers.font(theme, font)}
+    ${!!marginBottom && wrapperModifiers.padding(theme, marginBottom)}
 
     letter-spacing: 0.5px;
     text-align: justify;

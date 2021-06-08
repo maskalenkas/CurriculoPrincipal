@@ -1,24 +1,42 @@
 export default [
   {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x580',
-    title: 'Defy death 1',
-    subtitle: '<p>Play the new <strong>CrashLands</strong> season',
-    buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death',
-    ribbon: 'Bestselling',
+    img: '/img/moveIt.png',
+    title: 'App MoveIt',
+    subtitle:
+      'É um projeto com NextJS e React, com sistema de cache que visa lançar desafios fisicos.',
+    buttonLabel: 'Veja!',
+    buttonLink: 'https://github.com/maskalenkas/MoveIt',
   },
   {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x582',
-    title: 'Defy death 2',
-    subtitle: '<p>Play the new <strong>CrashLands</strong> season',
-    buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death',
+    img: '/img/wonGames.png',
+    title: 'Ecommerce WonGames',
+    subtitle:
+      'É um Ecommerce feito em NextJs, com testes unitarios, end-to-end e super completo. Atualmente em desenvolvimento.',
+    buttonLabel: 'Veja!',
+    buttonLink: 'https://github.com/maskalenkas/WonGames',
   },
   {
-    img: 'https://source.unsplash.com/user/willianjusten/1042x581',
-    title: 'Defy death 3',
-    subtitle: '<p>Play the new <strong>CrashLands</strong> season',
-    buttonLabel: 'Buy now',
-    buttonLink: '/games/defy-death',
+    img: '/img/pagina_netflix.png',
+    title: 'Netflix',
+    subtitle:
+      'É um projeto totalmente em HTML e JS, que visa clonar a pagina do Netflix',
+    buttonLabel: 'Veja!',
+    buttonLink: 'https://github.com/maskalenkas/Pagina-Netflix',
+  },
+  {
+    img: '/img/jogo_da_memoria.png',
+    title: 'Jogo da memoria',
+    subtitle:
+      'É um projeto totalmente em HTML e JS, que visa fazer um jogo da memoria',
+    buttonLabel: 'Veja!',
+    buttonLink: 'https://github.com/maskalenkas/Jogo-da-memoria',
+  },
+  {
+    img: '/img/pagina_instagram.png',
+    title: 'Pagina do Instagram',
+    subtitle:
+      'É um projeto totalmente em HTML e JS, que visa clonar a pagina do Instagram',
+    buttonLabel: 'Veja!',
+    buttonLink: 'https://github.com/maskalenkas/Pagina-Instagram',
   },
 ]

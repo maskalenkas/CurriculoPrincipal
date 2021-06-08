@@ -1,36 +1,45 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.main`
-  background-color: ${({ theme }) => theme.colors.mainBg};
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  padding: 3rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+import * as HeadingStyles from 'components/Heading/styles'
+import { Container } from 'components/Container/'
+import media from 'styled-media-query'
 
-export const Logo = styled.img`
-  width: 25rem;
-  margin-bottom: 2rem;
-`;
-
-export const Title = styled.h1`
+export const Sections = styled.section`
   ${({ theme }) => css`
-    font-size: 2.5rem;
-    color: ${theme.colors.primary};
+    & > ${HeadingStyles.Wrapper} {
+      text-align: center;
+      margin-bottom: 6rem;
+    }
+    & > ${Container},${SectionContact} {
+      margin-top: 10rem;
+
+      & > ${HeadingStyles.Wrapper} {
+        text-align: center;
+        margin-bottom: 6rem;
+      }
+    }
+
+    & > ${Container}:first-child {
+      margin-top: 3rem;
+    }
   `}
-`;
+`
 
-export const Description = styled.h2`
-  font-size: 2rem;
-  font-weight: 400;
-`;
+// Criado apenas para uxiliar na marcação do background
+export const MarkBg = styled.div``
 
-export const Illustration = styled.img`
-  margin-top: 3rem;
-  width: min(30rem, 100%);
-`;
+export const SectionAboutMe = styled.section``
+export const SectionPortfolio = styled.section``
+export const SectionSkills = styled.section``
+export const SectionContact = styled.section`
+  ${MarkBg} {
+    background-color: white;
+
+    ${media.lessThan('medium')`
+      padding: 8.5rem 0 3.5rem 0;
+
+      margin-left: -4.2rem;
+      margin-right: -4.2rem;
+    `}
+  }
+`

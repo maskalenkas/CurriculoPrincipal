@@ -6,10 +6,10 @@ import mock from './mock'
 
 describe('<AboutMe />', () => {
   it('should render the About-Me', () => {
-    const { container, debug } = renderWithTheme(<AboutMe data={mock} />)
+    const { container } = renderWithTheme(<AboutMe data={mock} />)
 
     expect(
-      screen.getByRole('heading', { name: 'Arthur Maskalenkas' }),
+      screen.getByRole('heading', { name: /meu nome é Arthur Maskalenkas/i }),
     ).toBeInTheDocument()
 
     expect(screen.getByAltText(/imagem de perfil/i)).toBeInTheDocument()
@@ -23,6 +23,6 @@ describe('<AboutMe />', () => {
     ).toBeInTheDocument()
 
     // Testando se de fato tem 6 colunas
-    expect(container.querySelectorAll('.coluna')).toHaveLength(6)
+    expect(container.querySelectorAll('.coluna')).toHaveLength(5)
   })
 })

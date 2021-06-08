@@ -8,7 +8,8 @@ export const Wrapper = styled.main`
     display: grid;
     grid-template-columns: 1fr 3fr;
     ${media.lessThan('medium')`
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
+      grid-gap: 0;
     `}
     grid-gap: ${theme.spacings.xlarge};
     padding: ${theme.spacings.medium};
@@ -18,24 +19,13 @@ export const Wrapper = styled.main`
 
 export const Photo = styled.img`
   ${({ theme }) => css`
-    max-height: 35rem;
+    height: 35rem;
+    width: 100%;
     padding: ${theme.spacings.xsmall};
   `}
 `
 
 export const Biography = styled.div``
-
-export const Data = styled.div`
-  ${media.lessThan('medium')`
-  grid-template-columns: 1fr;
-`};
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  & ${HeadingStyles.Wrapper}:first-child {
-    width: 10rem;
-  }
-`
 
 export type ColumnProps = {
   displayColumn?: boolean
@@ -44,7 +34,41 @@ export type ColumnProps = {
 export const Column = styled.div<ColumnProps>`
   ${({ theme, displayColumn }) => css`
     display: flex;
+    align-content: center;
     ${displayColumn && 'flex-direction: column'};
     padding-bottom: ${theme.spacings.xxsmall};
   `}
+`
+
+export const Data = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  & ${HeadingStyles.Wrapper}:first-child {
+    width: 8rem;
+  }
+
+  ${media.lessThan('medium')`
+    grid-template-columns: 1fr;
+
+    ${Column} {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    ${Column} > ${HeadingStyles.Wrapper} {
+      text-align: center;
+      line-height: 1.1;
+  `}
+`
+
+export const SocialLinksWrapper = styled.div`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.xsmall};
+  `}
+`
+export const NameWrapper = styled.div`
+  ${HeadingStyles.Wrapper} {
+    line-height: 1.1;
+  }
 `

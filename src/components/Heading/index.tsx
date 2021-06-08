@@ -11,6 +11,13 @@ export type sizeTypes = 'small' | 'medium' | 'xlarge' | 'xxlarge' | 'xxxlarge'
 export type weightTypes = 'light' | 'normal' | 'bold'
 export type asTypes = 'text' | 'title' | 'subtitle'
 export type fontTypes = 'ptsams' | 'oswald'
+export type marginBottomTypes =
+  | 'xsmall'
+  | 'small'
+  | 'medium'
+  | 'large'
+  | 'xlarge'
+  | 'xxlarge'
 
 export type HeadingProps = {
   asTextType?: asTypes
@@ -19,6 +26,7 @@ export type HeadingProps = {
   color?: colorTypes
   weight?: weightTypes
   font?: fontTypes
+  marginBottom?: marginBottomTypes
 }
 
 const Heading = ({
@@ -28,6 +36,7 @@ const Heading = ({
   color,
   weight,
   font,
+  marginBottom,
 }: HeadingProps) => (
   <S.Wrapper
     asTextType={asTextType}
@@ -35,6 +44,7 @@ const Heading = ({
     color={color}
     weight={weight}
     font={font}
+    marginBottom={marginBottom}
   >
     {children}
   </S.Wrapper>
