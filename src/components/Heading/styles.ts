@@ -41,6 +41,7 @@ const wrapperModifiers = {
       ${autoStyle(theme, 'oswald', 'xxxlarge', 'normal')}
       text-transform: uppercase;
       color: ${theme.colors.black};
+      line-height: 1.1;
     `}
 
     ${typeText == 'subtitle' &&

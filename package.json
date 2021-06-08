@@ -22,13 +22,9 @@
     "src/**/*": []
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-regular-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.14",
     "@styled-icons/boxicons-logos": "^10.23.0",
     "@styled-icons/entypo-social": "^10.18.0",
+    "@styled-icons/fluentui-system-filled": "^10.34.0",
     "@styled-icons/material": "^10.28.0",
     "@styled-icons/material-outlined": "^10.28.0",
     "@styled-icons/remix-fill": "^10.18.0",
