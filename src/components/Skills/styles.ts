@@ -56,7 +56,7 @@ export const Title = styled.div`
     }
 
     ${media.lessThan('medium')`
-      padding: 0.5rem 3.5rem
+      padding: 1.5rem 3.5rem
     `}
   `}
 `

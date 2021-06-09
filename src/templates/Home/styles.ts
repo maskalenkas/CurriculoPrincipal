@@ -11,29 +11,32 @@ export const Sections = styled.section`
       margin-bottom: 6rem;
     }
 
-    /* Fazendo com que fique full-width em telas menores */
     ${SectionSkills}, ${SectionPortfolio}, ${SectionContact} {
+      /* Espaçamentos entre sessões */
+      margin-top: 15rem;
+
+      & > ${HeadingStyles.Wrapper} {
+        margin-bottom: 7.5rem;
+      }
+
       & > ${MarkBg} {
         background-color: white;
       }
 
       ${media.lessThan('medium')`
-        padding: 8.5rem 0 3.5rem 0;
-        margin-left: -4.2rem;
-        margin-right: -4.2rem;
-        background-color: red;
-      `}
-    }
+      /* Espaçamento entre sessões */
+      margin-top:10rem;
 
-    /* Definindo espaços a partir das sessões */
-    & > ${Container},${SectionContact}, ${SectionSkills}, ${SectionPortfolio} {
-      margin-top: 10rem;
-
-      /* Definindo espaços a partir dos titulos */
       & > ${HeadingStyles.Wrapper} {
-        text-align: center;
-        margin-bottom: 6rem;
+        /* width 50 */
       }
+
+      /* Fazendo com que fique full-width em telas menores */
+        ${Container} {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      `}
     }
 
     /* Definindo espaços a partir do primeiro filho */
