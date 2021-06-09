@@ -24,13 +24,6 @@ export const Wrapper = styled.main`
     position: relative;
     padding: 3.5rem 3rem 3rem 3rem;
     background: ${theme.colors.white};
-
-    ${media.lessThan('medium')`
-      padding: 8.5rem 0 3.5rem 0;
-
-      margin-left: -4.2rem;
-      margin-right: -4.2rem;
-    `}
   `}
 `
 

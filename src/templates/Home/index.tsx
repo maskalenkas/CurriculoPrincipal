@@ -18,24 +18,33 @@ const Home = () => (
       </S.SectionAboutMe>
     </Container>
 
-    <Container>
+    {/* Portfolio */}
+    <S.SectionPortfolio>
       <Heading asTextType="title" color="primary" weight="light">
         Meus projetos
       </Heading>
-      <S.SectionPortfolio>
-        <BannerSlider items={mockSlider} />
-      </S.SectionPortfolio>
-    </Container>
 
-    <Container>
+      <Container>
+        <BannerSlider items={mockSlider} />
+      </Container>
+    </S.SectionPortfolio>
+    {/* / Portfolio */}
+
+    {/* Skills */}
+    <S.SectionSkills>
       <Heading asTextType="title" color="primary" weight="light">
         Minhas habilidades
       </Heading>
-      <S.SectionSkills>
-        <Skills />
-      </S.SectionSkills>
-    </Container>
 
+      <S.MarkBg>
+        <Container>
+          <Skills />
+        </Container>
+      </S.MarkBg>
+    </S.SectionSkills>
+    {/* / Skills */}
+
+    {/* Contact */}
     <S.SectionContact>
       <Heading asTextType="title" color="primary" weight="light">
         CONTATO
@@ -47,6 +56,7 @@ const Home = () => (
         </Container>
       </S.MarkBg>
     </S.SectionContact>
+    {/* / Contact */}
   </S.Sections>
 )
 
