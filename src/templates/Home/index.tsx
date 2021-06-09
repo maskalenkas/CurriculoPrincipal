@@ -9,6 +9,7 @@ import mockAboutMe from 'components/AboutMe/mock'
 
 import Heading from 'components/Heading'
 import Contact from 'components/Contact'
+import Footer from 'components/Footer'
 
 const Home = () => (
   <S.Sections>
@@ -57,7 +58,13 @@ const Home = () => (
     {/* / Contact */}
 
     {/* Footer */}
-    <S.FooterWrapper></S.FooterWrapper>
+    <S.FooterWrapper>
+      <S.MarkBgFooter>
+        <Container>
+          <Footer />
+        </Container>
+      </S.MarkBgFooter>
+    </S.FooterWrapper>
     {/* / Footer */}
   </S.Sections>
 )

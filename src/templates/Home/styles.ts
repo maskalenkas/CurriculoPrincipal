@@ -6,7 +6,7 @@ import media from 'styled-media-query'
 
 export const Sections = styled.section`
   ${({ theme }) => css`
-    ${SectionSkills}, ${SectionPortfolio}, ${SectionContact} {
+    ${SectionSkills}, ${SectionPortfolio}, ${SectionContact}, ${FooterWrapper} {
       /* Espaçamentos entre sessões */
       margin-top: 15rem;
 
@@ -47,6 +47,13 @@ export const Sections = styled.section`
 export const MarkBg = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.white};
+  `}
+`
+
+// gambiarra
+export const MarkBgFooter = styled.div`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.primary};
   `}
 `
 
