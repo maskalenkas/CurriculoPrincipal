@@ -1,8 +1,9 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 
 import * as HeadingStyles from 'components/Heading/styles'
 import { Container } from 'components/Container/'
 import media from 'styled-media-query'
+import { colorTypes } from 'components/Heading'
 
 export const Sections = styled.section`
   ${({ theme }) => css`
@@ -43,19 +44,24 @@ export const Sections = styled.section`
   `}
 `
 
-// Criado apenas para auxiliar na marcação do background
-export const MarkBg = styled.div`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.white};
-  `}
-`
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // /
+const MarkBgModifiers = {
+  bgModifier: (theme: DefaultTheme, bgColor: colorTypes) => css`
+    background-color: ${theme.colors[bgColor]};
+  `,
+}
 
-// gambiarra
-export const MarkBgFooter = styled.div`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.primary};
+type MarkBgProps = {
+  colorBg?: colorTypes
+}
+
+// Criado apenas para auxiliar na marcação do background
+export const MarkBg = styled.div<MarkBgProps>`
+  ${({ theme, colorBg = 'white' }) => css`
+    ${MarkBgModifiers.bgModifier(theme, colorBg)}
   `}
 `
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // /
 
 export const SectionAboutMe = styled.section``
 export const SectionPortfolio = styled.section``

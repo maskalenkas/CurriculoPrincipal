@@ -59,11 +59,11 @@ const Home = () => (
 
     {/* Footer */}
     <S.FooterWrapper>
-      <S.MarkBgFooter>
+      <S.MarkBg colorBg="primary">
         <Container>
           <Footer />
         </Container>
-      </S.MarkBgFooter>
+      </S.MarkBg>
     </S.FooterWrapper>
     {/* / Footer */}
   </S.Sections>
