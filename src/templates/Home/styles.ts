@@ -6,16 +6,13 @@ import media from 'styled-media-query'
 
 export const Sections = styled.section`
   ${({ theme }) => css`
-    & > ${HeadingStyles.Wrapper} {
-      text-align: center;
-      margin-bottom: 6rem;
-    }
-
     ${SectionSkills}, ${SectionPortfolio}, ${SectionContact} {
       /* Espaçamentos entre sessões */
       margin-top: 15rem;
 
       & > ${HeadingStyles.Wrapper} {
+        /* Alinhando os titulos */
+        text-align: center;
         margin-bottom: 7.5rem;
       }
 
@@ -24,11 +21,14 @@ export const Sections = styled.section`
       }
 
       ${media.lessThan('medium')`
-      /* Espaçamento entre sessões */
       margin-top:10rem;
-
+      /* Espaçamento entre sessões */
       & > ${HeadingStyles.Wrapper} {
-        /* width 50 */
+        /* Alinhando os titulos */
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 6rem;
       }
 
       /* Fazendo com que fique full-width em telas menores */
