@@ -53,6 +53,7 @@ export const Content = styled.div`
 
 export const IconWhatsapp = styled(Whatsapp)`
   color: lime;
+
   width: 12rem !important;
 `
 export const IconContactCard = styled(ContactCard)`

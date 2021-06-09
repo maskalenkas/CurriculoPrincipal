@@ -16,13 +16,10 @@ export const Sections = styled.section`
         margin-bottom: 7.5rem;
       }
 
-      & > ${MarkBg} {
-        background-color: white;
-      }
-
       ${media.lessThan('medium')`
+      /* Espaçamentos entre as sessões */
       margin-top:10rem;
-      /* Espaçamento entre sessões */
+
       & > ${HeadingStyles.Wrapper} {
         /* Alinhando os titulos */
         width: 80%;
@@ -47,7 +44,9 @@ export const Sections = styled.section`
 `
 
 // Criado apenas para auxiliar na marcação do background
-export const MarkBg = styled.div``
+export const MarkBg = styled.div`
+  background-color: white;
+`
 
 export const SectionAboutMe = styled.section``
 export const SectionPortfolio = styled.section``

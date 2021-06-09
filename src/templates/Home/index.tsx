@@ -36,11 +36,9 @@ const Home = () => (
         Minhas habilidades
       </Heading>
 
-      <S.MarkBg>
-        <Container>
-          <Skills />
-        </Container>
-      </S.MarkBg>
+      <Container>
+        <Skills />
+      </Container>
     </S.SectionSkills>
     {/* / Skills */}
 
