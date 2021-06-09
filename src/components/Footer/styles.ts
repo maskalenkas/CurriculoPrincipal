@@ -4,6 +4,7 @@ import { Coffee, Heart } from '@styled-icons/boxicons-solid'
 
 import * as HeadingStyles from 'components/Heading/styles'
 import { colorTypes, HeadingProps } from 'components/Heading'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.footer`
   ${({ theme }) => css`
@@ -13,9 +14,14 @@ export const Wrapper = styled.footer`
     justify-content: center;
     align-items: center;
     user-select: none;
+
+    ${media.lessThan('medium')`
+      padding: ${theme.spacings.xsmall};
+    `}
   `}
 `
 
+// Molde dos componentes
 const IconBaseModifier = {
   Default: (
     theme: DefaultTheme,
@@ -32,9 +38,14 @@ const IconBaseModifier = {
       color: ${hoverColor};
       transition: 0.4s;
     }
+
+    ${media.lessThan('medium')`
+      width: 2.5rem;
+    `}
   `,
 }
 
+// Componentes
 export const IconCoffee = styled(Coffee)`
   ${({ theme }) => css`
     ${IconBaseModifier.Default(theme, 'white', 'black')}
@@ -47,6 +58,12 @@ export const IconLove = styled(Heart)`
   `}
 `
 
+// O texto em si
 export const Text = styled(HeadingStyles.Wrapper)`
-  ${({ theme }) => css``}
+  ${({ theme }) => css`
+    ${media.lessThan('medium')`
+        text-align:center;
+        font-size: ${theme.font.sizes.xlarge}
+    `}
+  `}
 `
