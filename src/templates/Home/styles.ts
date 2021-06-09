@@ -45,10 +45,13 @@ export const Sections = styled.section`
 
 // Criado apenas para auxiliar na marcação do background
 export const MarkBg = styled.div`
-  background-color: white;
+  ${({ theme }) => css`
+    background-color: ${theme.colors.white};
+  `}
 `
 
 export const SectionAboutMe = styled.section``
 export const SectionPortfolio = styled.section``
 export const SectionSkills = styled.section``
 export const SectionContact = styled.section``
+export const FooterWrapper = styled.footer``

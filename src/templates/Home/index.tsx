@@ -45,7 +45,7 @@ const Home = () => (
     {/* Contact */}
     <S.SectionContact>
       <Heading asTextType="title" color="primary" weight="light">
-        CONTATO
+        Contato
       </Heading>
 
       <S.MarkBg>
@@ -55,6 +55,10 @@ const Home = () => (
       </S.MarkBg>
     </S.SectionContact>
     {/* / Contact */}
+
+    {/* Footer */}
+    <S.FooterWrapper></S.FooterWrapper>
+    {/* / Footer */}
   </S.Sections>
 )
 
