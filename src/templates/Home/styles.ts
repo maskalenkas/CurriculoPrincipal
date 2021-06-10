@@ -7,15 +7,12 @@ import { colorTypes } from 'components/Heading'
 
 export const Sections = styled.section`
   ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    align-itens: center;
     ${SectionSkills}, ${SectionPortfolio}, ${SectionContact}, ${FooterWrapper} {
       /* Espaçamentos entre sessões */
       margin-top: 15rem;
-
-      & > ${HeadingStyles.Wrapper} {
-        /* Alinhando os titulos */
-        text-align: center;
-        margin-bottom: 7.5rem;
-      }
 
       ${media.lessThan('medium')`
       /* Espaçamentos entre as sessões */
@@ -68,3 +65,23 @@ export const SectionPortfolio = styled.section``
 export const SectionSkills = styled.section``
 export const SectionContact = styled.section``
 export const FooterWrapper = styled.footer``
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > ${HeadingStyles.Wrapper} {
+    /* Alinhando os titulos */
+    margin-bottom: 7.5rem;
+    cursor: pointer;
+    transition: all 0.4s;
+    text-align: center;
+
+    :hover {
+      transform: scale(1.2);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+  }
+`

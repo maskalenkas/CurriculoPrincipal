@@ -21,9 +21,11 @@ const Home = () => (
 
     {/* Portfolio */}
     <S.SectionPortfolio>
-      <Heading asTextType="title" color="primary" weight="light">
-        Meus projetos
-      </Heading>
+      <S.TitleWrapper>
+        <Heading asTextType="title" color="primary" weight="light">
+          Meus projetos
+        </Heading>
+      </S.TitleWrapper>
 
       <Container>
         <BannerSlider items={mockSlider} />
@@ -33,9 +35,11 @@ const Home = () => (
 
     {/* Skills */}
     <S.SectionSkills>
-      <Heading asTextType="title" color="primary" weight="light">
-        Minhas habilidades
-      </Heading>
+      <S.TitleWrapper>
+        <Heading asTextType="title" color="primary" weight="light">
+          Minhas habilidades
+        </Heading>
+      </S.TitleWrapper>
 
       <Container>
         <Skills />
@@ -45,9 +49,11 @@ const Home = () => (
 
     {/* Contact */}
     <S.SectionContact>
-      <Heading asTextType="title" color="primary" weight="light">
-        Contato
-      </Heading>
+      <S.TitleWrapper>
+        <Heading asTextType="title" color="primary" weight="light">
+          Contato
+        </Heading>
+      </S.TitleWrapper>
 
       <S.MarkBg>
         <Container>
