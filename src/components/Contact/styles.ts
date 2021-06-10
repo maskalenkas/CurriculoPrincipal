@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 import media from 'styled-media-query'
 
 import { StyledIconBase } from '@styled-icons/styled-icon'
@@ -14,7 +14,7 @@ export const Wrapper = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: ${theme.spacings.medium};
+    padding: ${theme.spacings.small} ${theme.spacings.medium};
     /* Selecionando o icone de agenda */
     ${HeadingStyles.Wrapper} {
       text-align: center;
@@ -23,41 +23,42 @@ export const Wrapper = styled.main`
   `}
 `
 
-export const IconWrapper = styled.div`
-  ${({ theme }) => css`
-    /* Selecionando todos os icones */
-    > ${StyledIconBase} {
-      width: 17rem;
-      transition: all 0.2s;
-
-      &:hover {
-        transform: scale(1.2);
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-    }
-
-    ${media.lessThan('medium')`
-     & > ${StyledIconBase} {
-        width: 13rem;
-      }
-`}
-  `}
-`
-
+// Centralizando tudo
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-export const IconWhatsapp = styled(Whatsapp)`
-  color: lime;
+// Molde dos icones
+const BaseIconModifier = {
+  default: (
+    theme: DefaultTheme,
+    colorIcon: 'green' | '#0487cc',
+    sizeIcon?: string,
+  ) => css`
+    color: ${colorIcon};
+    width: ${sizeIcon};
+  `,
+}
 
-  width: 12rem !important;
-`
+// Icones
 export const IconContactCard = styled(ContactCard)`
   ${({ theme }) => css`
-    color: ${theme.colors.primary};
+    ${BaseIconModifier.default(theme, '#0487cc', '15rem')}
+
+    ${media.lessThan('medium')`
+      ${BaseIconModifier.default(theme, '#0487cc', '10rem')}
+    `}
+  `}
+`
+
+export const IconWhatsapp = styled(Whatsapp)`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.xsmall};
+    ${BaseIconModifier.default(theme, 'green', '10rem')}
+    ${media.lessThan('medium')`
+      ${BaseIconModifier.default(theme, 'green', '7rem')}
+    `};
   `}
 `

@@ -21,7 +21,7 @@ export const Wrapper = styled.footer`
   `}
 `
 
-// Molde dos componentes
+// Molde dos icons componentes
 const IconBaseModifier = {
   Default: (
     theme: DefaultTheme,

@@ -85,28 +85,28 @@ export const IconWrapper = styled.div<IconWrapperProps>`
       margin-top: 1.5rem;
       text-align: center;
       cursor: pointer;
-    }
 
-    ${HeadingStyle}:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      display: inline-block;
-      height: 1em;
-      width: 100%;
-      border-bottom: 1px solid;
-      margin-top: 10px;
-      opacity: 0;
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-      transition: opacity 0.35s, transform 0.35s;
-      -webkit-transform: scale(0, 1);
-      transform: scale(0, 1);
-    }
+      & :after {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        height: 1em;
+        width: 100%;
+        border-bottom: 1px solid;
+        margin-top: 10px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1);
+      }
 
-    ${HeadingStyle}:hover:after {
-      opacity: 1;
-      -webkit-transform: scale(1);
-      transform: scale(1);
+      &:hover:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
     }
 
     /* Selecionando todos os icones */
