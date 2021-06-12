@@ -9,6 +9,7 @@ export type IconsProps = {
   hoverColor?: colorTypes
   isScale?: boolean
   marginTop?: string
+  Top?: string
 }
 
 const Icons = ({
@@ -19,6 +20,7 @@ const Icons = ({
   isScale,
   sizeMedia,
   marginTop,
+  Top,
 }: IconsProps) => (
   <S.Wrapper
     color={color}
@@ -27,6 +29,7 @@ const Icons = ({
     isScale={isScale}
     sizeMedia={sizeMedia}
     marginTop={marginTop}
+    Top={Top}
   >
     {children}
   </S.Wrapper>

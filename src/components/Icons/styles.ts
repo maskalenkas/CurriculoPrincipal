@@ -24,12 +24,25 @@ const wrapperModifiers = {
     `}
   `,
   marginTopMod: (theme: DefaultTheme, marginTop: string) => css`
-    top: ${marginTop};
+    margin-top: ${marginTop};
+  `,
+
+  topMod: (theme: DefaultTheme, Top: string) => css`
+    top: ${Top};
   `,
 }
 
 export const Wrapper = styled.main<IconsProps>`
-  ${({ theme, color, size, hoverColor, isScale, sizeMedia, marginTop }) => css`
+  ${({
+    theme,
+    color,
+    size,
+    hoverColor,
+    isScale,
+    sizeMedia,
+    marginTop,
+    Top,
+  }) => css`
     width: ${size};
     color: ${theme.colors[color]};
     transition: all 0.2s;
@@ -40,5 +53,6 @@ export const Wrapper = styled.main<IconsProps>`
     ${!!isScale && wrapperModifiers.scaleMod(theme)}
     ${!!sizeMedia && wrapperModifiers.sizeMediaMod(theme, sizeMedia)}
     ${!!marginTop && wrapperModifiers.marginTopMod(theme, marginTop)}
+    ${!!Top && wrapperModifiers.topMod(theme, Top)}
   `}
 `

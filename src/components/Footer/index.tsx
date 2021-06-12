@@ -12,7 +12,7 @@ const Footer = () => (
       <Icons
         color="white"
         size="3.1rem"
-        marginTop="-0.5rem"
+        Top="-0.5rem"
         hoverColor="black"
         sizeMedia="2.5rem"
       >
@@ -22,7 +22,7 @@ const Footer = () => (
       <Icons
         color="white"
         size="3.1rem"
-        marginTop="-0.5rem"
+        Top="-0.5rem"
         hoverColor="red"
         sizeMedia="2.5rem"
       >
