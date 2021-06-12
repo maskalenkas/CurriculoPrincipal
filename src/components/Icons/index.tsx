@@ -8,6 +8,7 @@ export type IconsProps = {
   children?: React.ReactNode
   hoverColor?: colorTypes
   isScale?: boolean
+  marginTop?: string
 }
 
 const Icons = ({
@@ -17,6 +18,7 @@ const Icons = ({
   hoverColor,
   isScale,
   sizeMedia,
+  marginTop,
 }: IconsProps) => (
   <S.Wrapper
     color={color}
@@ -24,6 +26,7 @@ const Icons = ({
     hoverColor={hoverColor}
     isScale={isScale}
     sizeMedia={sizeMedia}
+    marginTop={marginTop}
   >
     {children}
   </S.Wrapper>
