@@ -1,6 +1,7 @@
 import * as S from './styles'
 
 export type colorTypes =
+  | 'red'
   | 'primary'
   | 'secondary'
   | 'black'
