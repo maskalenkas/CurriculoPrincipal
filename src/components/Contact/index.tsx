@@ -1,10 +1,16 @@
 import * as S from './styles'
 
 import Heading from 'components/Heading'
+import Icons from 'components/Icons'
+
+import { ContactCard } from '@styled-icons/fluentui-system-filled'
+import { Whatsapp } from '@styled-icons/boxicons-logos'
 
 const Contact = () => (
   <S.Wrapper>
-    <S.IconContactCard aria-label="icone de um contato" />
+    <Icons color="primary" size="15rem" sizeMedia="12rem" isScale>
+      <ContactCard />
+    </Icons>
 
     <S.Content>
       <Heading
@@ -19,7 +25,15 @@ const Contact = () => (
         A melhor forma de contato é através do meu Whatsapp
       </Heading>
 
-      <S.IconWhatsapp aria-label="Icone do Whatsapp" />
+      <Icons
+        color="green"
+        size="10rem"
+        sizeMedia="7rem"
+        marginTop="1.5rem"
+        isScale
+      >
+        <Whatsapp />
+      </Icons>
     </S.Content>
   </S.Wrapper>
 )

@@ -29,36 +29,3 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
 `
-
-// Molde dos icones
-const BaseIconModifier = {
-  default: (
-    theme: DefaultTheme,
-    colorIcon: 'green' | '#0487cc',
-    sizeIcon?: string,
-  ) => css`
-    color: ${colorIcon};
-    width: ${sizeIcon};
-  `,
-}
-
-// Icones
-export const IconContactCard = styled(ContactCard)`
-  ${({ theme }) => css`
-    ${BaseIconModifier.default(theme, '#0487cc', '15rem')}
-
-    ${media.lessThan('medium')`
-      ${BaseIconModifier.default(theme, '#0487cc', '10rem')}
-    `}
-  `}
-`
-
-export const IconWhatsapp = styled(Whatsapp)`
-  ${({ theme }) => css`
-    margin-top: ${theme.spacings.xsmall};
-    ${BaseIconModifier.default(theme, 'green', '10rem')}
-    ${media.lessThan('medium')`
-      ${BaseIconModifier.default(theme, 'green', '7rem')}
-    `};
-  `}
-`
