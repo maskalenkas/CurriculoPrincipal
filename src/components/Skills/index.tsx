@@ -1,6 +1,8 @@
 import Heading from 'components/Heading'
 import * as S from './styles'
 
+// graphql, nextjs, storybook, strapi
+
 import {
   Testinglibrary,
   Cypress,
@@ -17,7 +19,7 @@ const Skills = () => (
         weight="light"
         size="xxlarge"
       >
-        SKILLS
+        TECNOLOGIAS
       </Heading>
     </S.Title>
 

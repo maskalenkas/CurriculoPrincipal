@@ -37,7 +37,7 @@ const Home = () => (
     <S.SectionSkills>
       <S.TitleWrapper>
         <Heading asTextType="title" color="primary" weight="light">
-          Minhas habilidades
+          Conhecimentos
         </Heading>
       </S.TitleWrapper>
 
