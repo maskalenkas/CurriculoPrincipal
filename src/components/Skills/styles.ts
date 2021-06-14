@@ -67,13 +67,9 @@ const IconWrapperModifiers = {
   `,
 }
 
-export type IconWrapperProps = {
-  iconSize?: string
-}
-
-export const IconWrapper = styled.div<IconWrapperProps>`
-  ${({ theme, iconSize }) => css`
-    display: flex;
+export const IconWrapper = styled.div`
+  ${({ theme }) => css`
+    display: grid;
     position: relative;
     flex-direction: column;
     justify-content: center;
@@ -108,30 +104,6 @@ export const IconWrapper = styled.div<IconWrapperProps>`
         transform: scale(1);
       }
     }
-
-    /* Selecionando todos os icones */
-    ${StyledIconBase} {
-      width: 15rem;
-      ${!!iconSize && IconWrapperModifiers.size(theme, iconSize)}
-      transition: all 0.2s;
-
-      &:hover {
-        transform: scale(1.2);
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-    }
-
-    ${media.lessThan('medium')`
-      ${StyledIconBase} {
-        width: 10rem;
-      }
-
-      & > ${CypressWrapper} {
-        width: 8rem;
-
-      }
-    `}
   `}
 `
 

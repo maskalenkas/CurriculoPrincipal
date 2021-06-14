@@ -8,8 +8,18 @@ import {
   Cypress,
   StyledComponents,
 } from '@styled-icons/simple-icons'
+import Icons from 'components/Icons'
 
-const Skills = () => (
+type skillList = {
+  icon: any
+  name: string
+}
+
+export type SkillsProps = {
+  items: skillList[]
+}
+
+const Skills = ({ items }: SkillsProps) => (
   <S.Wrapper>
     <S.Title>
       <Heading
@@ -25,39 +35,14 @@ const Skills = () => (
 
     <S.Content>
       <S.IconWrapper>
-        <S.JSWrapper aria-label="Icone do Javascript" />
-        <Heading>Javascript</Heading>
-      </S.IconWrapper>
-      <S.IconWrapper>
-        <S.HTMLWrapper aria-label="Icone do HTML5" />
-        <Heading>HTML5</Heading>
-      </S.IconWrapper>
-      <S.IconWrapper iconSize="12rem">
-        <S.CypressWrapper aria-label="Icone do Cypress" />
-        <Heading>Cypress</Heading>
-      </S.IconWrapper>
-      <S.IconWrapper>
-        <S.GitWrapper aria-label="Icone do GIT" />
-        <Heading>GIT</Heading>
-      </S.IconWrapper>
-      <S.IconWrapper>
-        <S.CSSWrapper aria-label="Icone do CSS3" />
-        <Heading>CSS3</Heading>
-      </S.IconWrapper>
-
-      <S.IconWrapper>
-        <S.ReactWrapper aria-label="Icone do React" />
-        <Heading>React</Heading>
-      </S.IconWrapper>
-
-      <S.IconWrapper>
-        <S.TestingLibraryWrapper aria-label="Icone da TestingLibrary" />
-        <Heading>Testing Library</Heading>
-      </S.IconWrapper>
-
-      <S.IconWrapper>
-        <S.BootstrapWrapper aria-label="Icone do Bootstrap" />
-        <Heading>Bootstrap</Heading>
+        {items.map((item) => (
+          <>
+            <Icons size="15rem" color="red" sizeMedia="10rem">
+              {item.icon.render()}
+            </Icons>
+            <Heading>{item.name}</Heading>
+          </>
+        ))}
       </S.IconWrapper>
     </S.Content>
   </S.Wrapper>
