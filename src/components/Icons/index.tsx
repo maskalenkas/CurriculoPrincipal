@@ -2,7 +2,8 @@ import { colorTypes, sizeTypes } from 'components/Heading'
 import * as S from './styles'
 
 export type IconsProps = {
-  color: colorTypes
+  color?: colorTypes
+  colorNoDefault?: string
   size: sizeTypes | string
   sizeMedia?: sizeTypes | string
   children?: React.ReactNode
@@ -21,6 +22,7 @@ const Icons = ({
   sizeMedia,
   marginTop,
   Top,
+  colorNoDefault,
 }: IconsProps) => (
   <S.Wrapper
     color={color}
@@ -30,6 +32,7 @@ const Icons = ({
     sizeMedia={sizeMedia}
     marginTop={marginTop}
     Top={Top}
+    colorNoDefault={colorNoDefault}
   >
     {children}
   </S.Wrapper>

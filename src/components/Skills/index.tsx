@@ -13,6 +13,7 @@ import Icons from 'components/Icons'
 type skillList = {
   icon: any
   name: string
+  color: string
 }
 
 export type SkillsProps = {
@@ -34,16 +35,20 @@ const Skills = ({ items }: SkillsProps) => (
     </S.Title>
 
     <S.Content>
-      <S.IconWrapper>
-        {items.map((item) => (
-          <>
-            <Icons size="15rem" color="red" sizeMedia="10rem">
-              {item.icon.render()}
-            </Icons>
-            <Heading>{item.name}</Heading>
-          </>
-        ))}
-      </S.IconWrapper>
+      {items.map((item) => (
+        <S.IconWrapper key={item.name}>
+          <Icons
+            size="15rem"
+            color="red"
+            sizeMedia="6rem"
+            colorNoDefault={item.color}
+            isScale
+          >
+            {item.icon.render()}
+          </Icons>
+          <Heading>{item.name}</Heading>
+        </S.IconWrapper>
+      ))}
     </S.Content>
   </S.Wrapper>
 )

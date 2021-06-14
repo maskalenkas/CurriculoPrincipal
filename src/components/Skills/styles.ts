@@ -20,36 +20,22 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
-    margin-top: 50px;
+    margin-top: 5rem;
     position: relative;
-    padding: 3.5rem 3rem 3rem 3rem;
+    padding: 6.5rem 3rem 3rem 3rem;
     background: ${theme.colors.white};
   `}
 `
 
-export const Content = styled.div`
-  ${({ theme }) => css`
-    gap: 5rem 0;
-    grid-template-columns: repeat(3, 1fr);
-    display: grid;
-    justify-items: center;
-    align-items: center;
-
-    ${media.lessThan('medium')`
-      grid-template-columns: repeat(2, 1fr)
-    `}
-  `};
-`
-
 export const Title = styled.div`
   ${({ theme }) => css`
+    user-select: none;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: -4rem;
     padding: 1.8rem 2.8rem;
     background-color: ${theme.colors.primary};
-    cursor: pointer;
 
     ${HeadingStyle} {
       text-align: center;
@@ -61,14 +47,24 @@ export const Title = styled.div`
   `}
 `
 
-const IconWrapperModifiers = {
-  size: (theme: DefaultTheme, iconSize: string) => css`
-    width: ${iconSize};
-  `,
-}
+export const Content = styled.div`
+  ${({ theme }) => css`
+    /* Fazendo com que tenha coluna de textos e icones */
+    gap: 5rem 0;
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    ${media.lessThan('medium')`
+      grid-template-columns: repeat(2, 1fr)
+    `}
+  `};
+`
 
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
+    /* Fazendo com que o icone fique em cima e o texto em baixo */
     display: grid;
     position: relative;
     flex-direction: column;
@@ -76,9 +72,10 @@ export const IconWrapper = styled.div`
     align-items: center;
     text-align: center;
 
+    /* Deixando o texto com efeito */
     ${HeadingStyle} {
       font-size: ${theme.font.sizes.xxlarge};
-      margin-top: 1.5rem;
+      margin-top: ${theme.spacings.xsmall};
       text-align: center;
       cursor: pointer;
 
@@ -105,31 +102,6 @@ export const IconWrapper = styled.div`
       }
     }
   `}
-`
-
-export const JSWrapper = styled(Javascript)`
-  color: #eed941;
-`
-export const HTMLWrapper = styled(Html5)`
-  color: #dd4b25;
-`
-export const CSSWrapper = styled(Css3)`
-  color: #0280c6;
-`
-
-export const GitWrapper = styled(Git)`
-  color: #e94e31;
-`
-
-export const ReactWrapper = styled(ReactLogo)`
-  color: #5dd3f3;
-`
-export const BootstrapWrapper = styled(Bootstrap)`
-  color: #7550ad;
-`
-
-export const TestingLibraryWrapper = styled(Testinglibrary)`
-  color: #ec4642;
 `
 
 export const CypressWrapper = styled(Cypress)`

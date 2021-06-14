@@ -30,6 +30,9 @@ const wrapperModifiers = {
   topMod: (theme: DefaultTheme, Top: string) => css`
     top: ${Top};
   `,
+  colorNoDefault: (colorNoDefault: string) => css`
+    color: ${colorNoDefault};
+  `,
 }
 
 export const Wrapper = styled.main<IconsProps>`
@@ -42,6 +45,7 @@ export const Wrapper = styled.main<IconsProps>`
     sizeMedia,
     marginTop,
     Top,
+    colorNoDefault,
   }) => css`
     width: ${size};
     color: ${theme.colors[color]};
@@ -54,5 +58,6 @@ export const Wrapper = styled.main<IconsProps>`
     ${!!sizeMedia && wrapperModifiers.sizeMediaMod(theme, sizeMedia)}
     ${!!marginTop && wrapperModifiers.marginTopMod(theme, marginTop)}
     ${!!Top && wrapperModifiers.topMod(theme, Top)}
+    ${!!colorNoDefault && wrapperModifiers.colorNoDefault(colorNoDefault)}
   `}
 `
