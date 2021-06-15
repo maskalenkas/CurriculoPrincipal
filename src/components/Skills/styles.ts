@@ -4,15 +4,6 @@ import styled, { css, DefaultTheme } from 'styled-components'
 
 import { StyledIconBase } from '@styled-icons/styled-icon'
 
-import {
-  Javascript,
-  Html5,
-  Css3,
-  Git,
-  ReactLogo,
-  Bootstrap,
-} from '@styled-icons/boxicons-logos'
-
 import { Wrapper as HeadingStyle } from 'components/Heading/styles'
 
 import { Testinglibrary, Cypress } from '@styled-icons/simple-icons'
@@ -24,6 +15,10 @@ export const Wrapper = styled.main`
     position: relative;
     padding: 6.5rem 3rem 3rem 3rem;
     background: ${theme.colors.white};
+
+    ${media.lessThan('medium')`
+      padding: 4rem 2rem 4rem 2rem;
+    `}
   `}
 `
 
@@ -42,7 +37,12 @@ export const Title = styled.div`
     }
 
     ${media.lessThan('medium')`
-      padding: 1.5rem 3.5rem
+      padding: 1.5rem 1.5rem;
+      top: -2.8rem;
+      
+      ${HeadingStyle} {
+        font-size: ${theme.font.sizes.xlarge}
+      }
     `}
   `}
 `
@@ -57,7 +57,8 @@ export const Content = styled.div`
     align-items: center;
 
     ${media.lessThan('medium')`
-      grid-template-columns: repeat(2, 1fr)
+      gap: 2rem 0;
+      grid-template-columns: repeat(3, 1fr)
     `}
   `};
 `
@@ -68,7 +69,7 @@ export const IconWrapper = styled.div`
     display: grid;
     position: relative;
     flex-direction: column;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     text-align: center;
 
@@ -79,6 +80,12 @@ export const IconWrapper = styled.div`
       text-align: center;
       cursor: pointer;
 
+      ${media.lessThan('medium')`
+        margin-top: ${theme.spacings.xxsmall};
+        font-size: ${theme.font.sizes.medium};
+        line-height: 1;
+      `}
+
       & :after {
         content: '';
         position: absolute;
@@ -87,7 +94,7 @@ export const IconWrapper = styled.div`
         height: 1em;
         width: 100%;
         border-bottom: 1px solid;
-        margin-top: 10px;
+        margin-top: 5px;
         opacity: 0;
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
         transition: opacity 0.35s, transform 0.35s;

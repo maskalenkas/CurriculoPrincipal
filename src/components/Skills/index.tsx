@@ -1,16 +1,14 @@
 import Heading from 'components/Heading'
 import * as S from './styles'
 
+import { StyledIcon } from '@styled-icons/styled-icon'
+
 // graphql, nextjs, storybook, strapi
 
-import {
-  Testinglibrary,
-  Cypress,
-  StyledComponents,
-} from '@styled-icons/simple-icons'
 import Icons from 'components/Icons'
 
 type skillList = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon: any
   name: string
   color: string
@@ -40,7 +38,7 @@ const Skills = ({ items }: SkillsProps) => (
           <Icons
             size="15rem"
             color="red"
-            sizeMedia="6rem"
+            sizeMedia="5rem"
             colorNoDefault={item.color}
             isScale
           >
