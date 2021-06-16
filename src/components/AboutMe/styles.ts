@@ -25,7 +25,11 @@ export const Photo = styled.img`
   `}
 `
 
-export const Biography = styled.div``
+export const Biography = styled.div`
+  > ${HeadingStyles.Wrapper} {
+    user-select: none;
+  }
+`
 
 export type ColumnProps = {
   displayColumn?: boolean
@@ -69,6 +73,6 @@ export const SocialLinksWrapper = styled.div`
 `
 export const NameWrapper = styled.div`
   ${HeadingStyles.Wrapper} {
-    line-height: 1.1;
+    user-select: none;
   }
 `

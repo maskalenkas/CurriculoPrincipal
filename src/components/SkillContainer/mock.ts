@@ -1,7 +1,7 @@
 export const HardSkills = [
   { skill: 'Testes unitarios' },
   { skill: 'Testes E2E' },
-  { skill: 'Estruturação de um projeto' },
+  { skill: 'Estruturação de um projeto escalavel' },
   { skill: 'Webhooks' },
   { skill: 'Rotas simples e dinamicas em NextJs' },
   { skill: 'SSG, SSR, SPA' },
@@ -15,5 +15,4 @@ export const SoftSkills = [
   { skill: 'Trabalho em equipe' },
   { skill: 'Comunicação pessoal' },
   { skill: 'Criatividade' },
-  { skill: 'Vontade de aprender' },
 ]

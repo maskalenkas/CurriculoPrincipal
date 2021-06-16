@@ -14,7 +14,6 @@ const wrapperModifiers = {
   scaleMod: (theme: DefaultTheme) => css`
     :hover {
       transform: scale(1.2);
-      cursor: pointer;
       transition: all 0.2s;
     }
   `,

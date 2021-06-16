@@ -75,10 +75,10 @@ export const IconWrapper = styled.div`
 
     /* Deixando o texto com efeito */
     ${HeadingStyle} {
+      user-select: none;
       font-size: ${theme.font.sizes.xxlarge};
       margin-top: ${theme.spacings.xsmall};
       text-align: center;
-      cursor: pointer;
 
       ${media.lessThan('medium')`
         margin-top: ${theme.spacings.xxsmall};

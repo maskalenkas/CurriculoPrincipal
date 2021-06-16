@@ -29,11 +29,10 @@ const AboutMe = ({ image, data }: AboutMeProps) => (
         </Heading>
         <Heading asTextType="text" marginBottom="small">
           Prazer, meu nome é Arthur Maskalenkas. Sou um Web Developer com 10
-          meses de aprendizado. Tenho bastante conhecimento em HTML5, CSS,
-          JavaScript, React, NextJS, testes unitarios e outras diversas
-          bibliotecas/frameworks. O meu aprendizado é constante, e a falta de
-          experiencia é compensada com uma força de vontade enorme em aprender e
-          ser melhor que eu mesmo.
+          meses de aprendizado. Tenho bastante conhecimento no ecossistema em
+          volta dele, incluindo NextJs e React. O meu aprendizado é constante, e
+          a falta de experiencia é compensada com uma força de vontade enorme em
+          aprender e ser melhor que eu mesmo.
         </Heading>
       </S.Biography>
 

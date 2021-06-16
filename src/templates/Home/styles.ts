@@ -23,7 +23,7 @@ export const Sections = styled.section`
         width: 80%;
         margin-right: auto;
         margin-left: auto;
-        margin-bottom: 6rem;
+        margin-bottom: 6rem; 
       }
 
  
@@ -107,15 +107,14 @@ export const TitleWrapper = styled.div`
   align-items: center;
 
   & > ${HeadingStyles.Wrapper} {
-    /* Alinhando os titulos */
+    /* Efeito e alinhamento */
     margin-bottom: 7.5rem;
-    cursor: pointer;
     transition: all 0.4s;
     text-align: center;
 
     :hover {
+      user-select: none;
       transform: scale(1.2);
-      cursor: pointer;
       transition: all 0.2s;
     }
   }

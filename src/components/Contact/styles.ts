@@ -10,6 +10,7 @@ import * as HeadingStyles from 'components/Heading/styles'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
+    user-select: none;
     background-color: ${theme.colors.white};
     display: flex;
     flex-direction: column;
