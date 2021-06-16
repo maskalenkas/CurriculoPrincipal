@@ -47,7 +47,7 @@ export const List = styled.ul`
     align-items: center;
 
     ${media.lessThan('medium')`
-      align-items: center;
+      align-items: flex-start;
       margin-top: -1rem;
     `}
   `}
