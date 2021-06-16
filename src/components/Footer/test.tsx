@@ -1,13 +1,17 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/tests/helpers'
 
-import Footer from '.';
+import Footer from '.'
 
 describe('<Footer />', () => {
   it('should render the heading', () => {
-    const { container } = render(<Footer />)
+    const { container } = renderWithTheme(<Footer />)
 
-    expect(screen.getByRole('heading', { name: /Footer/i })).toBeInTheDocument()
+    // renderiza o footer
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument()
 
-    expect(container.firstChild).toMatchSnapshot()
-  });
-});
+    // Renderiza os icones
+    expect(screen.getByTitle(/Xicara de café/i)).toBeInTheDocument()
+    expect(screen.getByTitle(/coração em forma de amor/i)).toBeInTheDocument()
+  })
+})

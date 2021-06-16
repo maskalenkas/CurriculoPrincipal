@@ -6,7 +6,7 @@ import Icons from 'components/Icons'
 import { Coffee, Heart } from '@styled-icons/boxicons-solid'
 
 const Footer = () => (
-  <S.Wrapper>
+  <S.Wrapper role="contentinfo">
     <S.Text asTextType="text" color="white" weight="light" size="xxlarge">
       Feito com muito, mas muito{' '}
       <Icons
@@ -16,7 +16,7 @@ const Footer = () => (
         hoverColor="black"
         sizeMedia="2.5rem"
       >
-        <Coffee />
+        <Coffee title="Xicara de café" />
       </Icons>{' '}
       e{' '}
       <Icons
@@ -26,7 +26,7 @@ const Footer = () => (
         hoverColor="red"
         sizeMedia="2.5rem"
       >
-        <Heart />
+        <Heart title="Coração em forma de amor" />
       </Icons>{' '}
       por Arthur Maskalenkas
     </S.Text>
