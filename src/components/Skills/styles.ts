@@ -11,7 +11,6 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
-    margin-top: 5rem;
     position: relative;
     padding: 6.5rem 3rem 3rem 3rem;
     background: ${theme.colors.white};
