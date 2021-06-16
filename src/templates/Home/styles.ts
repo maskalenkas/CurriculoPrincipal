@@ -10,7 +10,7 @@ export const Sections = styled.section`
     display: flex;
     flex-direction: column;
     align-itens: center;
-    ${SectionConhecimentos}, ${SectionPortfolio}, ${SectionContact},${SectionSkills},${FooterWrapper} {
+    ${SectionConhecimentos}, ${SectionPortfolio}, ${SectionContact},${SectionSkills} {
       /* Espaçamentos entre sessões */
       margin-top: 15rem;
 
@@ -18,12 +18,12 @@ export const Sections = styled.section`
       /* Espaçamentos entre as sessões */
       margin-top:10rem;
 
-      & > ${HeadingStyles.Wrapper} {
+      & > ${TitleWrapper} > ${HeadingStyles.Wrapper} {
         /* Alinhando os titulos */
         width: 80%;
         margin-right: auto;
         margin-left: auto;
-        margin-bottom: 6rem; 
+        margin-bottom: 4rem; 
       }
 
  
