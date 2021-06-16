@@ -28,8 +28,8 @@ export const Title = styled.div`
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -4rem;
-    padding: 1.8rem 2.8rem;
+    top: -3.5rem;
+    padding: 1.8rem 1.7rem;
     background-color: ${theme.colors.primary};
 
     ${HeadingStyle} {
@@ -51,7 +51,7 @@ export const Content = styled.div`
   ${({ theme }) => css`
     /* Fazendo com que tenha coluna de textos e icones */
     gap: 5rem 0;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     display: grid;
     justify-items: center;
     align-items: center;

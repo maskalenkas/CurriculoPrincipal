@@ -20,7 +20,7 @@ const wrapperModifiers = {
   `,
   sizeMediaMod: (theme: DefaultTheme, sizeMedia: sizeTypes | string) => css`
     ${media.lessThan('medium')`
-      width: ${sizeMedia}
+      min-width: ${sizeMedia}
     `}
   `,
   marginTopMod: (theme: DefaultTheme, marginTop: string) => css`
@@ -47,8 +47,8 @@ export const Wrapper = styled.main<IconsProps>`
     Top,
     colorNoDefault,
   }) => css`
-    width: ${size};
-    color: ${theme.colors[color]};
+    min-width: ${size};
+    color: ${theme.colors[color!]};
     transition: all 0.2s;
     display: inline-block;
     position: relative;

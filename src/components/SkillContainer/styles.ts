@@ -5,9 +5,12 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
-    margin-top: 5rem;
     position: relative;
-    padding: 0.5rem 3rem 3rem 3rem;
+    padding: 4.5rem 3rem 3rem 3rem;
+
+    ${media.lessThan('medium')`
+      padding: 4rem 2rem 4rem 2rem;
+    `}
   `}
 `
 
@@ -18,17 +21,20 @@ export const Title = styled.div`
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -8rem;
-    padding: 1.8rem 2.8rem;
+    top: -3.5rem;
+    padding: 1.8rem 1.7rem;
     background-color: ${theme.colors.primary};
-    transition: all 0.2s;
 
     ${HeadingStyle} {
       text-align: center;
     }
-
     ${media.lessThan('medium')`
-      padding: 1.5rem 3.5rem
+      padding: 1.5rem 1.5rem;
+      top: -2.8rem;
+      
+      ${HeadingStyle} {
+        font-size: ${theme.font.sizes.xlarge}
+      }
     `}
   `}
 `
@@ -39,6 +45,11 @@ export const List = styled.ul`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    ${media.lessThan('medium')`
+      align-items: center;
+      margin-top: -1rem;
+    `}
   `}
 `
 
@@ -55,7 +66,6 @@ export const ListItemIconWrapper = styled.div`
     display: flex;
     margin-top: ${theme.spacings.xsmall};
     transition: all 0.2s;
-
     :hover {
       transform: scale(1.2);
       transition: all 0.2s;
@@ -71,9 +81,9 @@ export const DisplayStories = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 10rem;
   position: relative;
-
   ${media.lessThan('medium')`
     gap: 2rem;
+    grid-template-columns: 1fr;
   `}
 `
 
