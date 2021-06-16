@@ -6,10 +6,16 @@ import * as S from './styles'
 
 import mockSlider from 'components/BannerSlider/mock'
 import mockAboutMe from 'components/AboutMe/mock'
+import mockSkills from 'components/Skills/mock'
+import {
+  HardSkills as mockHardSkills,
+  SoftSkills as mockSoftSkills,
+} from 'components/SkillContainer/mock'
 
 import Heading from 'components/Heading'
 import Contact from 'components/Contact'
 import Footer from 'components/Footer'
+import SkillContainer from 'components/SkillContainer'
 
 const Home = () => (
   <S.Sections>
@@ -33,8 +39,8 @@ const Home = () => (
     </S.SectionPortfolio>
     {/* / Portfolio */}
 
-    {/* Skills */}
-    <S.SectionSkills>
+    {/* Conhecimentos */}
+    <S.SectionConhecimentos>
       <S.TitleWrapper>
         <Heading asTextType="title" color="primary" weight="light">
           Conhecimentos
@@ -42,10 +48,38 @@ const Home = () => (
       </S.TitleWrapper>
 
       <Container>
-        <Skills />
+        <Skills items={mockSkills} />
+      </Container>
+    </S.SectionConhecimentos>
+    {/* / Conhecimentos */}
+
+    {/* Skills */}
+    <S.SectionSkills>
+      <S.TitleWrapper>
+        <Heading asTextType="title" color="primary" weight="light">
+          Skills
+        </Heading>
+      </S.TitleWrapper>
+
+      <Container>
+        {/* Container Skills */}
+        <S.ContainerSkills>
+          {/* Coluna 1 */}
+          <S.ColumnSkills>
+            <SkillContainer title="Hard skills" items={mockHardSkills} />
+          </S.ColumnSkills>
+          {/* / Coluna 1 */}
+
+          {/* Coluna 2 */}
+          <S.ColumnSkills>
+            <SkillContainer title="Soft skills" items={mockSoftSkills} />
+          </S.ColumnSkills>
+          {/* / Coluna 2 */}
+        </S.ContainerSkills>
+        {/* / Container Skills */}
       </Container>
     </S.SectionSkills>
-    {/* / Skills */}
+    {/* / SKills */}
 
     {/* Contact */}
     <S.SectionContact>

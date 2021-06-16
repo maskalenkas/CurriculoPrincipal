@@ -10,7 +10,7 @@ export const Sections = styled.section`
     display: flex;
     flex-direction: column;
     align-itens: center;
-    ${SectionSkills}, ${SectionPortfolio}, ${SectionContact}, ${FooterWrapper} {
+    ${SectionConhecimentos}, ${SectionPortfolio}, ${SectionContact},${SectionSkills},${FooterWrapper} {
       /* Espaçamentos entre sessões */
       margin-top: 15rem;
 
@@ -26,11 +26,7 @@ export const Sections = styled.section`
         margin-bottom: 6rem;
       }
 
-      /* Fazendo com que fique full-width em telas menores */
-        ${Container} {
-          padding-left: 0;
-          padding-right: 0;
-        }
+ 
       `}
     }
 
@@ -58,13 +54,52 @@ export const MarkBg = styled.div<MarkBgProps>`
     ${MarkBgModifiers.bgModifier(theme, colorBg)}
   `}
 `
+
+// Criado exclusivamente para a estrutura de skills
+export const ContainerSkills = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  position: relative;
+  ${media.lessThan('medium')`
+    gap: 8rem;
+    grid-template-columns: 1fr;
+  `}
+`
+
+export const ColumnSkills = styled.div`
+  position: relative;
+`
+
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // /
 
+const sectionModifiers = {
+  /* Fazendo com que fique full-width em telas menores */
+  fullWidthMedia: () => css`
+    ${media.lessThan('medium')`
+      ${Container} {
+        padding-left: 0;
+        padding-right: 0;
+    }
+  `}
+  `,
+}
+
 export const SectionAboutMe = styled.section``
-export const SectionPortfolio = styled.section``
+export const SectionPortfolio = styled.section`
+  ${sectionModifiers.fullWidthMedia()}
+`
+export const SectionConhecimentos = styled.section`
+  ${sectionModifiers.fullWidthMedia()}
+`
+export const SectionContact = styled.section`
+  ${sectionModifiers.fullWidthMedia()}
+`
 export const SectionSkills = styled.section``
-export const SectionContact = styled.section``
-export const FooterWrapper = styled.footer``
+
+export const FooterWrapper = styled.footer`
+  ${sectionModifiers.fullWidthMedia()}
+`
 
 export const TitleWrapper = styled.div`
   display: flex;
