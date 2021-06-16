@@ -7,6 +7,7 @@ export const Wrapper = styled.main`
   ${({ theme }) => css`
     position: relative;
     padding: 4.5rem 3rem 3rem 3rem;
+    background-color: ${theme.colors.white};
 
     ${media.lessThan('medium')`
       padding: 4rem 2rem 4rem 2rem;

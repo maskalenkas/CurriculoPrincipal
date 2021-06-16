@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
 import { Container } from 'components/Container'
 import SkillContainer, { SkillContainerProps } from '.'
-import mockSkills from './mock'
+import { HardSkills as mockSkills } from './mock'
 
 import * as S from './styles'
 
