@@ -34,7 +34,7 @@ const wrapperModifiers = {
   `,
 }
 
-export const Wrapper = styled.main<IconsProps>`
+export const Wrapper = styled.svg<IconsProps>`
   ${({
     theme,
     color,
@@ -45,6 +45,7 @@ export const Wrapper = styled.main<IconsProps>`
     marginTop,
     Top,
     colorNoDefault,
+    title,
   }) => css`
     min-width: ${size};
     color: ${theme.colors[color!]};

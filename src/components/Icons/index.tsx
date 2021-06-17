@@ -5,6 +5,7 @@ import * as S from './styles'
 // Fazer testes para localizar eles
 
 export type IconsProps = {
+  title?: string
   color?: colorTypes
   colorNoDefault?: string
   size: sizeTypes | string
@@ -17,6 +18,7 @@ export type IconsProps = {
 }
 
 const Icons = ({
+  title,
   color,
   size,
   children,
@@ -36,6 +38,7 @@ const Icons = ({
     marginTop={marginTop}
     Top={Top}
     colorNoDefault={colorNoDefault}
+    title={title}
   >
     {children}
   </S.Wrapper>
