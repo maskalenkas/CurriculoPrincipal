@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 import media from 'styled-media-query'
 
 import { StyledIconBase } from '@styled-icons/styled-icon'
@@ -10,11 +10,12 @@ import * as HeadingStyles from 'components/Heading/styles'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
+    user-select: none;
     background-color: ${theme.colors.white};
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    padding: ${theme.spacings.small} ${theme.spacings.medium};
     /* Selecionando o icone de agenda */
     ${HeadingStyles.Wrapper} {
       text-align: center;
@@ -23,40 +24,9 @@ export const Wrapper = styled.main`
   `}
 `
 
-export const IconWrapper = styled.div`
-  ${({ theme }) => css`
-    /* Selecionando todos os icones */
-    > ${StyledIconBase} {
-      width: 17rem;
-      transition: all 0.2s;
-
-      &:hover {
-        transform: scale(1.2);
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-    }
-
-    ${media.lessThan('medium')`
-     & > ${StyledIconBase} {
-        width: 13rem;
-      }
-`}
-  `}
-`
-
+// Centralizando tudo
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
-
-export const IconWhatsapp = styled(Whatsapp)`
-  color: lime;
-  width: 12rem !important;
-`
-export const IconContactCard = styled(ContactCard)`
-  ${({ theme }) => css`
-    color: ${theme.colors.primary};
-  `}
 `

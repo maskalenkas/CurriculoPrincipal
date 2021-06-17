@@ -4,15 +4,6 @@ import styled, { css, DefaultTheme } from 'styled-components'
 
 import { StyledIconBase } from '@styled-icons/styled-icon'
 
-import {
-  Javascript,
-  Html5,
-  Css3,
-  Git,
-  ReactLogo,
-  Bootstrap,
-} from '@styled-icons/boxicons-logos'
-
 import { Wrapper as HeadingStyle } from 'components/Heading/styles'
 
 import { Testinglibrary, Cypress } from '@styled-icons/simple-icons'
@@ -20,151 +11,103 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
-    margin-top: 50px;
     position: relative;
-    padding: 3.5rem 3rem 3rem 3rem;
+    padding: 6.5rem 3rem 3rem 3rem;
     background: ${theme.colors.white};
 
     ${media.lessThan('medium')`
-      padding: 8.5rem 0 3.5rem 0;
+      padding: 4rem 2rem 4rem 2rem;
+    `}
+  `}
+`
 
-      margin-left: -4.2rem;
-      margin-right: -4.2rem;
+export const Title = styled.div`
+  ${({ theme }) => css`
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -3.5rem;
+    padding: 1.8rem 1.7rem;
+    background-color: ${theme.colors.primary};
+
+    ${HeadingStyle} {
+      text-align: center;
+    }
+
+    ${media.lessThan('medium')`
+      padding: 1.5rem 1.5rem;
+      top: -2.8rem;
+      
+      ${HeadingStyle} {
+        font-size: ${theme.font.sizes.xlarge}
+      }
     `}
   `}
 `
 
 export const Content = styled.div`
   ${({ theme }) => css`
+    /* Fazendo com que tenha coluna de textos e icones */
     gap: 5rem 0;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     display: grid;
     justify-items: center;
     align-items: center;
 
     ${media.lessThan('medium')`
-      grid-template-columns: repeat(2, 1fr)
+      gap: 2rem 0;
+      grid-template-columns: repeat(3, 1fr)
     `}
   `};
 `
 
-export const Title = styled.div`
+export const IconWrapper = styled.div`
   ${({ theme }) => css`
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -4rem;
-    padding: 1.8rem 2.8rem;
-    background-color: ${theme.colors.primary};
-    cursor: pointer;
-
-    ${HeadingStyle} {
-      text-align: center;
-    }
-
-    ${media.lessThan('medium')`
-      padding: 0.5rem 3.5rem
-    `}
-  `}
-`
-
-const IconWrapperModifiers = {
-  size: (theme: DefaultTheme, iconSize: string) => css`
-    width: ${iconSize};
-  `,
-}
-
-export type IconWrapperProps = {
-  iconSize?: string
-}
-
-export const IconWrapper = styled.div<IconWrapperProps>`
-  ${({ theme, iconSize }) => css`
-    display: flex;
+    /* Fazendo com que o icone fique em cima e o texto em baixo */
+    display: grid;
     position: relative;
     flex-direction: column;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     text-align: center;
 
+    /* Deixando o texto com efeito */
     ${HeadingStyle} {
+      user-select: none;
       font-size: ${theme.font.sizes.xxlarge};
-      margin-top: 1.5rem;
+      margin-top: ${theme.spacings.xsmall};
       text-align: center;
-      cursor: pointer;
-    }
 
-    ${HeadingStyle}:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      display: inline-block;
-      height: 1em;
-      width: 100%;
-      border-bottom: 1px solid;
-      margin-top: 10px;
-      opacity: 0;
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-      transition: opacity 0.35s, transform 0.35s;
-      -webkit-transform: scale(0, 1);
-      transform: scale(0, 1);
-    }
+      ${media.lessThan('medium')`
+        margin-top: ${theme.spacings.xxsmall};
+        font-size: ${theme.font.sizes.medium};
+        line-height: 1;
+      `}
 
-    ${HeadingStyle}:hover:after {
-      opacity: 1;
-      -webkit-transform: scale(1);
-      transform: scale(1);
-    }
-
-    /* Selecionando todos os icones */
-    ${StyledIconBase} {
-      width: 15rem;
-      ${!!iconSize && IconWrapperModifiers.size(theme, iconSize)}
-      transition: all 0.2s;
-
-      &:hover {
-        transform: scale(1.2);
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-    }
-
-    ${media.lessThan('medium')`
-      ${StyledIconBase} {
-        width: 10rem;
+      & :after {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        height: 1em;
+        width: 100%;
+        border-bottom: 1px solid;
+        margin-top: 5px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1);
       }
 
-      & > ${CypressWrapper} {
-        width: 8rem;
-
+      &:hover:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
       }
-    `}
+    }
   `}
-`
-
-export const JSWrapper = styled(Javascript)`
-  color: #eed941;
-`
-export const HTMLWrapper = styled(Html5)`
-  color: #dd4b25;
-`
-export const CSSWrapper = styled(Css3)`
-  color: #0280c6;
-`
-
-export const GitWrapper = styled(Git)`
-  color: #e94e31;
-`
-
-export const ReactWrapper = styled(ReactLogo)`
-  color: #5dd3f3;
-`
-export const BootstrapWrapper = styled(Bootstrap)`
-  color: #7550ad;
-`
-
-export const TestingLibraryWrapper = styled(Testinglibrary)`
-  color: #ec4642;
 `
 
 export const CypressWrapper = styled(Cypress)`

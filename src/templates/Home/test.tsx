@@ -5,15 +5,17 @@ import { renderWithTheme } from 'utils/tests/helpers'
 import Home from '.'
 
 describe('<Main />', () => {
-  it('should render the heading', () => {
+  it('deve renderizar as sessões', () => {
     const { container } = renderWithTheme(<Home />)
 
-    expect(container.firstChild).toMatchSnapshot()
-  })
+    expect(
+      screen.getByRole('heading', { name: /meus projetos/i }),
+    ).toBeInTheDocument()
 
-  it('should render the colors correctly', () => {
-    const { container } = renderWithTheme(<Home />)
+    expect(
+      screen.getByRole('heading', { name: /conhecimentos/i }),
+    ).toBeInTheDocument()
 
-    expect(container.firstChild).toHaveStyle({ 'background-color': '#efefef' })
+    expect(screen.getByRole('heading', { name: 'Contato' })).toBeInTheDocument()
   })
 })
