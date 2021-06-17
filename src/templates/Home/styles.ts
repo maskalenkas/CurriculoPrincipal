@@ -23,7 +23,7 @@ export const Sections = styled.section`
         width: 80%;
         margin-right: auto;
         margin-left: auto;
-        margin-bottom: 4rem; 
+        margin-bottom: 6rem; 
       }
 
  

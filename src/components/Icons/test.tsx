@@ -5,7 +5,7 @@ import { Coffee } from '@styled-icons/boxicons-solid'
 
 import Icons from '.'
 
-describe('<Test />', () => {
+describe('<Icons />', () => {
   it('deve testar a renderização e o media', () => {
     const { container } = renderWithTheme(
       <Icons color="primary" size="5rem" sizeMedia="2rem" data-testid="icone">

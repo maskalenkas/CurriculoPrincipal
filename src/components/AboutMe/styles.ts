@@ -45,17 +45,19 @@ export const Column = styled.div<ColumnProps>`
 `
 
 export const Data = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  ${({ theme }) => css`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-  & ${HeadingStyles.Wrapper}:first-child {
-    width: 8rem;
-  }
+    & ${HeadingStyles.Wrapper}:first-child {
+      width: 8rem;
+    }
 
-  ${media.lessThan('medium')`
+    ${media.lessThan('medium')`
     grid-template-columns: 1fr;
 
     ${Column} {
+      margin-top: ${theme.spacings.xxsmall};
       flex-direction: column;
       align-items: center;
     }
@@ -63,6 +65,7 @@ export const Data = styled.div`
     ${Column} > ${HeadingStyles.Wrapper} {
       text-align: center;
       line-height: 1.1;
+    `}
   `}
 `
 

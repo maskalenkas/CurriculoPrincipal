@@ -1,6 +1,9 @@
 import { colorTypes, sizeTypes } from 'components/Heading'
 import * as S from './styles'
 
+// Incluir title e label: svg
+// Fazer testes para localizar eles
+
 export type IconsProps = {
   color?: colorTypes
   colorNoDefault?: string
