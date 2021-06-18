@@ -19,7 +19,7 @@ describe('<Icons />', () => {
       </Icons>,
     )
 
-    expect(screen.getByTitle(/coffe/i)).toBeInTheDocument()
+    expect(screen.getByRole('svg', { name: /adsa/i })).toBeInTheDocument()
 
     expect(screen.getByTitle(/coffe/i)).toHaveStyleRule('min-width', '2rem', {
       media: '(max-width: 768px)',
