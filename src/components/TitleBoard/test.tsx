@@ -1,13 +1,12 @@
 import { render, screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/tests/helpers'
 
 import TitleBoard from '.'
 
 describe('<TitleBoard />', () => {
   it('should render the heading', () => {
-    const { container } = render(<TitleBoard title="testando" />)
+    renderWithTheme(<TitleBoard>Item 1</TitleBoard>)
 
-    expect(
-      screen.getByRole('heading', { name: /TitleBoard/i }),
-    ).toBeInTheDocument()
+    expect(screen.getByText(/Item 1/i)).toBeInTheDocument()
   })
 })

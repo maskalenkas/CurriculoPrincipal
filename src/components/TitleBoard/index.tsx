@@ -2,7 +2,6 @@ import { ReactNode } from 'react'
 import * as S from './styles'
 
 export type TitleBoardProps = {
-  title: string
   children: ReactNode
 }
 
