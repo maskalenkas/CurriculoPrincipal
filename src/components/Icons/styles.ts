@@ -34,7 +34,7 @@ const wrapperModifiers = {
   `,
 }
 
-export const Wrapper = styled.main<IconsProps>`
+export const Wrapper = styled.div<IconsProps>`
   ${({
     theme,
     color,

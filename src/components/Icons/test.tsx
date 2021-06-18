@@ -8,47 +8,70 @@ import Icons from '.'
 describe('<Icons />', () => {
   it('deve testar a renderização e o media', () => {
     const { container } = renderWithTheme(
-      <Icons color="primary" size="5rem" sizeMedia="2rem" data-testid="icone">
-        <Coffee title="Coffee" />
+      <Icons
+        color="primary"
+        size="5rem"
+        sizeMedia="2rem"
+        data-testid="icone"
+        title="coffe"
+      >
+        <Coffee />
       </Icons>,
     )
 
-    expect(
-      screen.getByRole('img', { name: /coffee/i }).parentElement,
-    ).toHaveStyle({
-      width: '5rem',
-    })
+    expect(screen.getByRole('svg', { name: /adsa/i })).toBeInTheDocument()
 
-    expect(
-      screen.getByRole('img', { name: /coffee/i }).parentElement,
-    ).toHaveStyleRule('width', '2rem', { media: '(max-width: 768px)' })
+    expect(screen.getByTitle(/coffe/i)).toHaveStyleRule('min-width', '2rem', {
+      media: '(max-width: 768px)',
+    })
   })
 
   it('deve testar o hover', () => {
-    const { debug, container } = renderWithTheme(
-      <Icons color="primary" size="5rem" hoverColor="secondary">
-        <Coffee title="Coffee" />
+    renderWithTheme(
+      <Icons color="primary" size="5rem" hoverColor="secondary" title="Coffee">
+        <Coffee />
       </Icons>,
     )
 
-    expect(
-      screen.getByRole('img', { name: /coffee/i }).parentElement,
-    ).toHaveStyleRule('color', '#757575', {
+    expect(screen.getByTitle(/coffe/i)).toHaveStyleRule('color', '#757575', {
       modifier: ':hover',
+    })
+  })
+
+  it('Varias propriedades aplicadas em estilo', () => {
+    const { debug, container } = renderWithTheme(
+      <Icons
+        size="15rem"
+        color="primary"
+        title="Coffee"
+        colorNoDefault="#fffff"
+        marginTop="5rem"
+        Top="5rem"
+      >
+        <Coffee />
+      </Icons>,
+    )
+
+    expect(screen.getByTitle(/coffe/i)).toHaveStyle({
+      'margin-top': '5rem',
+      top: '5rem',
+      color: '#fffff',
     })
   })
 
   it('deve testar o zoom ao passar o mouse', () => {
     const { debug, container } = renderWithTheme(
-      <Icons size="15rem" color="primary" isScale={true}>
-        <Coffee title="Coffee" />
+      <Icons size="15rem" color="primary" isScale={true} title="Coffee">
+        <Coffee />
       </Icons>,
     )
 
-    expect(
-      screen.getByRole('img', { name: /coffee/i }).parentElement,
-    ).toHaveStyleRule('transform', 'scale(1.2)', {
-      modifier: ':hover',
-    })
+    expect(screen.getByTitle(/coffe/i)).toHaveStyleRule(
+      'transform',
+      'scale(1.2)',
+      {
+        modifier: ':hover',
+      },
+    )
   })
 })
