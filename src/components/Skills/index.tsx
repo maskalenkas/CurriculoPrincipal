@@ -1,17 +1,15 @@
 import Heading from 'components/Heading'
 import * as S from './styles'
 
-import { StyledIcon } from '@styled-icons/styled-icon'
-
-// graphql, nextjs, storybook, strapi
-
 import Icons from 'components/Icons'
+import ContainerSkill from 'components/ContainerSkill'
 
 type skillList = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon: any
   name: string
   color: string
+  title: string
 }
 
 export type SkillsProps = {
@@ -19,19 +17,7 @@ export type SkillsProps = {
 }
 
 const Skills = ({ items }: SkillsProps) => (
-  <S.Wrapper>
-    <S.Title>
-      <Heading
-        asTextType="title"
-        color="white"
-        font="ptsams"
-        weight="light"
-        size="xxlarge"
-      >
-        TECNOLOGIAS
-      </Heading>
-    </S.Title>
-
+  <ContainerSkill title="Tecnologias">
     <S.Content>
       {items.map((item) => (
         <S.IconWrapper key={item.name}>
@@ -41,6 +27,7 @@ const Skills = ({ items }: SkillsProps) => (
             sizeMedia="5rem"
             colorNoDefault={item.color}
             isScale
+            title={item.title}
           >
             {item.icon.render()}
           </Icons>
@@ -48,7 +35,7 @@ const Skills = ({ items }: SkillsProps) => (
         </S.IconWrapper>
       ))}
     </S.Content>
-  </S.Wrapper>
+  </ContainerSkill>
 )
 
 export default Skills
