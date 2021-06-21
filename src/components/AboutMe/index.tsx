@@ -19,18 +19,19 @@ const AboutMe = ({ image, data }: AboutMeProps) => (
     </S.Column>
 
     <S.Column displayColumn>
-      <S.Biography>
-        <S.NameWrapper>
-          <Heading asTextType="title" color="primary">
-            Arthur Maskalenkas{' '}
-          </Heading>
-        </S.NameWrapper>
+      <S.NameWrapper>
+        <Heading asTextType="title" color="primary">
+          Arthur Maskalenkas{' '}
+        </Heading>
+      </S.NameWrapper>
 
-        <S.SubtitleWrapper>
-          <Heading asTextType="subtitle" marginBottom="small">
-            Web Developer
-          </Heading>
-        </S.SubtitleWrapper>
+      <S.SubtitleWrapper>
+        <Heading asTextType="subtitle" marginBottom="small">
+          Web Developer
+        </Heading>
+      </S.SubtitleWrapper>
+
+      <S.Biography>
         <Heading asTextType="text" marginBottom="small">
           Prazer, meu nome é Arthur Maskalenkas. Sou um Web Developer com 10
           meses de aprendizado. Tenho bastante conhecimento no ecossistema em

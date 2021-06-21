@@ -32,9 +32,11 @@ export const Photo = styled.img`
 `
 
 export const Biography = styled.div`
-  > ${HeadingStyles.Wrapper} {
-    user-select: none;
-  }
+  ${media.lessThan('medium')`
+    ${HeadingStyles.Wrapper}{
+      text-align: start;
+    }
+  `}
 `
 
 export type ColumnProps = {
