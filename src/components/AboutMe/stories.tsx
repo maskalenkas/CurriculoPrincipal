@@ -8,7 +8,7 @@ export default {
   title: 'AboutMe',
   component: AboutMe,
   args: {
-    image: '/img/fotocurrc.jpg',
+    image: '/img/computers.svg',
     data: mock,
   },
 } as Meta
