@@ -35,7 +35,7 @@ const Contact = () => (
       <div
         onClick={() =>
           (window.location.href =
-            'https://wa.me/+55011976660220?text=Tudo%20Bem?"')
+            'https://wa.me/+55011976660220?text=Tudo%20Bem?')
         }
       >
         <Icons
