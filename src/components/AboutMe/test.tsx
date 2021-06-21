@@ -22,7 +22,7 @@ describe('<AboutMe />', () => {
       screen.getByLabelText(/Varias colunas com informações sobre o Arthur/i),
     ).toBeInTheDocument()
 
-    // Testando se de fato tem 6 colunas
+    // Testando se de fato tem 5 colunas
     expect(container.querySelectorAll('.coluna')).toHaveLength(5)
   })
 })

@@ -1,17 +1,24 @@
 import '../../../setupTests'
 import { render, screen } from '@testing-library/react'
 
-import { SoftSkills } from './mock'
+import { HardSkills } from './mock'
 
 import SkillContainer from '.'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 describe('<SkillContainer />', () => {
-  it('should render the heading', () => {
+  it('veirifica se esta renderizando tudo', () => {
     const { container } = renderWithTheme(
-      <SkillContainer items={SoftSkills} title="teste" />,
+      <SkillContainer items={HardSkills} title="teste" />,
     )
 
-    expect(screen.getByRole('heading', { name: /teste/i })).toBeInTheDocument()
+    // Verificando se foi renderizado
+    expect(screen.getByText(/testes unitarios/i)).toBeInTheDocument()
+
+    // Verificando se o titulo foi renderizado
+    expect(screen.getByText('teste')).toBeInTheDocument()
+
+    // Verificando se tem 7 elementos no array
+    expect(screen.getAllByTitle(/icon checked/i)).toHaveLength(7)
   })
 })

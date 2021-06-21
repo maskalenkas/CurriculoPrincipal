@@ -8,7 +8,13 @@ import { Whatsapp } from '@styled-icons/boxicons-logos'
 
 const Contact = () => (
   <S.Wrapper>
-    <Icons color="primary" size="15rem" sizeMedia="12rem" isScale>
+    <Icons
+      color="primary"
+      size="15rem"
+      sizeMedia="12rem"
+      isScale
+      title="icon Contact"
+    >
       <ContactCard />
     </Icons>
 
@@ -31,6 +37,7 @@ const Contact = () => (
         sizeMedia="7rem"
         marginTop="1.5rem"
         isScale
+        title="icon Whatsapp"
       >
         <Whatsapp />
       </Icons>

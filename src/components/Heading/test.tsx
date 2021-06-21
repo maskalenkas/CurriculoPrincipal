@@ -78,7 +78,7 @@ describe('<Heading />', () => {
     })
   })
 
-  it('deve renderizar o heading com um padding', () => {
+  it('deve renderizar o heading com um margin', () => {
     const { container, debug } = renderWithTheme(
       <Heading marginBottom="small">Texto</Heading>,
     )

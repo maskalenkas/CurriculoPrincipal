@@ -24,6 +24,7 @@ export const Sections = styled.section`
         margin-right: auto;
         margin-left: auto;
         margin-bottom: 6rem; 
+        font-size: ${theme.font.sizes.xxlarge};
       }
 
  

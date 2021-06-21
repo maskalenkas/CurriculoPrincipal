@@ -6,22 +6,28 @@ import media from 'styled-media-query'
 export const Wrapper = styled.main`
   ${({ theme }) => css`
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    ${media.lessThan('medium')`
-      grid-template-columns: 100%;
-      grid-gap: 0;
-    `}
+    grid-template-columns: 2fr 3fr;
     grid-gap: ${theme.spacings.xlarge};
     padding: ${theme.spacings.medium};
     background-color: white;
+
+    ${media.lessThan('medium')`
+      grid-template-columns: 100%;
+      grid-gap: 0;
+      padding: ${theme.spacings.xsmall};
+    `}
   `}
 `
 
 export const Photo = styled.img`
   ${({ theme }) => css`
-    height: 35rem;
-    width: 100%;
-    padding: ${theme.spacings.xsmall};
+    max-width: 55rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    ${media.lessThan('medium')`
+      margin-bottom: ${theme.spacings.xsmall};
+    `}
   `}
 `
 
@@ -39,6 +45,7 @@ export const Column = styled.div<ColumnProps>`
   ${({ theme, displayColumn }) => css`
     display: flex;
     align-content: center;
+
     ${displayColumn && 'flex-direction: column'};
     padding-bottom: ${theme.spacings.xxsmall};
   `}
@@ -74,8 +81,26 @@ export const SocialLinksWrapper = styled.div`
     margin-top: ${theme.spacings.xsmall};
   `}
 `
+
+export const SubtitleWrapper = styled.div`
+  user-select: none;
+
+  ${media.lessThan('medium')`
+    ${HeadingStyles.Wrapper} {
+      text-align: center;
+    }
+`}
+`
+
 export const NameWrapper = styled.div`
-  ${HeadingStyles.Wrapper} {
-    user-select: none;
-  }
+  ${({ theme }) => css`
+    ${HeadingStyles.Wrapper} {
+      user-select: none;
+
+      ${media.lessThan('medium')`
+      text-align:center;
+      font-size: ${theme.font.sizes.xxlarge};
+    `}
+    }
+  `}
 `
