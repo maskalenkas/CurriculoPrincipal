@@ -24,6 +24,10 @@ export const Photo = styled.img`
     max-width: 55rem;
     margin-left: auto;
     margin-right: auto;
+
+    ${media.lessThan('medium')`
+      margin-bottom: ${theme.spacings.xsmall};
+    `}
   `}
 `
 
@@ -77,13 +81,22 @@ export const SocialLinksWrapper = styled.div`
     margin-top: ${theme.spacings.xsmall};
   `}
 `
+
+export const SubtitleWrapper = styled.div`
+  ${media.lessThan('medium')`
+    ${HeadingStyles.Wrapper} {
+      text-align: center;
+    }
+`}
+`
+
 export const NameWrapper = styled.div`
   ${({ theme }) => css`
     ${HeadingStyles.Wrapper} {
       user-select: none;
 
       ${media.lessThan('medium')`
-     
+      text-align:center;
       font-size: ${theme.font.sizes.xxlarge};
     `}
     }

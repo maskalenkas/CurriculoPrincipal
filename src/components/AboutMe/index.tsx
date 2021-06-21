@@ -26,9 +26,11 @@ const AboutMe = ({ image, data }: AboutMeProps) => (
           </Heading>
         </S.NameWrapper>
 
-        <Heading asTextType="subtitle" marginBottom="small">
-          Web Developer
-        </Heading>
+        <S.SubtitleWrapper>
+          <Heading asTextType="subtitle" marginBottom="small">
+            Web Developer
+          </Heading>
+        </S.SubtitleWrapper>
         <Heading asTextType="text" marginBottom="small">
           Prazer, meu nome é Arthur Maskalenkas. Sou um Web Developer com 10
           meses de aprendizado. Tenho bastante conhecimento no ecossistema em
