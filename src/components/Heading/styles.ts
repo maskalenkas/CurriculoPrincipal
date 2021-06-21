@@ -2,6 +2,7 @@ import styled, { css, DefaultTheme } from 'styled-components'
 import media from 'styled-media-query'
 
 import {
+  alignTextTypes,
   asTypes,
   colorTypes,
   fontTypes,
@@ -70,11 +71,28 @@ const wrapperModifiers = {
   padding: (theme: DefaultTheme, marginBottom: marginBottomTypes) => css`
     margin-bottom: ${theme.spacings[marginBottom]};
   `,
+
+  alignText: (alignText: alignTextTypes) => css`
+    text-align: ${alignText};
+  `,
 }
 
 export const Wrapper = styled.h2<HeadingProps>`
-  ${({ theme, asTextType, size, color, weight, font, marginBottom }) => css`
+  ${({
+    theme,
+    asTextType,
+    size,
+    color,
+    weight,
+    font,
+    marginBottom,
+    alignText,
+  }) => css`
+    //Primeiro o padrão
     ${!!asTextType && wrapperModifiers.asType(theme, asTextType)}
+
+    letter-spacing: 0.5px;
+    text-align: justify;
 
     // Depois vem o customizavel
     ${!!size && wrapperModifiers.size(theme, size)}
@@ -82,8 +100,6 @@ export const Wrapper = styled.h2<HeadingProps>`
     ${!!weight && wrapperModifiers.weight(theme, weight)}
     ${!!font && wrapperModifiers.font(theme, font)}
     ${!!marginBottom && wrapperModifiers.padding(theme, marginBottom)}
-
-    letter-spacing: 0.5px;
-    text-align: justify;
+    ${!!alignText && wrapperModifiers.alignText(alignText)}
   `}
 `

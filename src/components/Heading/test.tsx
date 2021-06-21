@@ -87,4 +87,14 @@ describe('<Heading />', () => {
       'margin-bottom': '2.4rem',
     })
   })
+
+  it('deve renderizar o heading com um um alinhamento', () => {
+    const { container, debug } = renderWithTheme(
+      <Heading alignText="center">Texto</Heading>,
+    )
+
+    expect(screen.getByRole('heading', { name: /texto/i })).toHaveStyle({
+      'text-align': 'center',
+    })
+  })
 })

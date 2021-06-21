@@ -21,6 +21,8 @@ export type marginBottomTypes =
   | 'xlarge'
   | 'xxlarge'
 
+export type alignTextTypes = 'center' | 'justify' | 'start'
+
 export type HeadingProps = {
   asTextType?: asTypes
   children: React.ReactNode
@@ -29,6 +31,7 @@ export type HeadingProps = {
   weight?: weightTypes
   font?: fontTypes
   marginBottom?: marginBottomTypes
+  alignText?: alignTextTypes
 }
 
 const Heading = ({
@@ -39,6 +42,7 @@ const Heading = ({
   weight,
   font,
   marginBottom,
+  alignText,
 }: HeadingProps) => (
   <S.Wrapper
     asTextType={asTextType}
@@ -47,6 +51,7 @@ const Heading = ({
     weight={weight}
     font={font}
     marginBottom={marginBottom}
+    alignText={alignText}
   >
     {children}
   </S.Wrapper>
