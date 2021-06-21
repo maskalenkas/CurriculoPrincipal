@@ -15,8 +15,4 @@ export default [
     coluna: 'cidade',
     data: 'São Paulo',
   },
-  {
-    coluna: 'website',
-    data: 'www.maskalenkas.com.br',
-  },
 ]

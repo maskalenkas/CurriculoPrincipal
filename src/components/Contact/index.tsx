@@ -31,16 +31,24 @@ const Contact = () => (
         A melhor forma de contato é através do meu Whatsapp
       </Heading>
 
-      <Icons
-        color="green"
-        size="10rem"
-        sizeMedia="7rem"
-        marginTop="1.5rem"
-        isScale
-        title="icon Whatsapp"
+      {/* Gambiarra para não tipar icons */}
+      <div
+        onClick={() =>
+          (window.location.href =
+            'https://wa.me/+55011976660220?text=Tudo%20Bem?"')
+        }
       >
-        <Whatsapp />
-      </Icons>
+        <Icons
+          color="green"
+          size="10rem"
+          sizeMedia="7rem"
+          marginTop="1.5rem"
+          isScale
+          title="icon Whatsapp"
+        >
+          <Whatsapp />
+        </Icons>
+      </div>
     </S.Content>
   </S.Wrapper>
 )

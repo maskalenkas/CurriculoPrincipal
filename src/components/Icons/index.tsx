@@ -1,8 +1,6 @@
 import { colorTypes, sizeTypes } from 'components/Heading'
+import { ButtonHTMLAttributes } from 'react'
 import * as S from './styles'
-
-// Incluir title e label: svg
-// Fazer testes para localizar eles
 
 export type IconsProps = {
   title?: string
@@ -15,7 +13,7 @@ export type IconsProps = {
   isScale?: boolean
   marginTop?: string
   Top?: string
-}
+} & ButtonHTMLAttributes<HTMLButtonElement>
 
 const Icons = ({
   title,
@@ -28,6 +26,7 @@ const Icons = ({
   marginTop,
   Top,
   colorNoDefault,
+  ...props
 }: IconsProps) => (
   <S.Wrapper
     color={color}
