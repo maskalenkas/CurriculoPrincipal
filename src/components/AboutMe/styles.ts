@@ -83,6 +83,8 @@ export const SocialLinksWrapper = styled.div`
 `
 
 export const SubtitleWrapper = styled.div`
+  user-select: none;
+
   ${media.lessThan('medium')`
     ${HeadingStyles.Wrapper} {
       text-align: center;
