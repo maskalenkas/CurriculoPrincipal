@@ -21,7 +21,7 @@ export const Wrapper = styled.main`
 
 export const Photo = styled.img`
   ${({ theme }) => css`
-    max-width: 55rem;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 
