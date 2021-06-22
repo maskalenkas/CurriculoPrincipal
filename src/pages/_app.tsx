@@ -29,7 +29,7 @@ function App({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:image"
-          content="https://photos.google.com/share/AF1QipOYiszrh1KdeiscQToYBK6D4_WOu5ChhswpbYQ5NNy979T2IQgachzXDmLmG8RETQ/photo/AF1QipPUJ-nXjdWQVrMsIuNLsL89pjTcfOGBMO-G7Y3k?key=LU5ENmVFWWdxeU1ERFJuLU9tYTF4Q05JMl8yQWpB"
+          content="https://www.maskalenkas.com.br/img/fotoPagina.jpg"
         />
 
         {/* <!-- Twitter --> */}
@@ -48,7 +48,7 @@ function App({ Component, pageProps }: AppProps) {
         />
         <meta
           property="twitter:image"
-          content="https://photos.google.com/share/AF1QipOYiszrh1KdeiscQToYBK6D4_WOu5ChhswpbYQ5NNy979T2IQgachzXDmLmG8RETQ/photo/AF1QipPUJ-nXjdWQVrMsIuNLsL89pjTcfOGBMO-G7Y3k?key=LU5ENmVFWWdxeU1ERFJuLU9tYTF4Q05JMl8yQWpB"
+          content="https://www.maskalenkas.com.br/img/fotoPagina.jpg"
         />
       </Head>
       <GlobalStyles />
