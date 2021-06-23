@@ -17,7 +17,7 @@ import {
   Typescript,
 } from '@styled-icons/simple-icons'
 
-export default [
+export const mock1 = [
   {
     icon: Javascript,
     color: '#eed941',
@@ -60,5 +60,14 @@ export default [
     color: '#533B78',
     name: 'Bootstrap',
     title: 'icon Bootstrap',
+  },
+]
+
+export const mock2 = [
+  {
+    icon: Html5,
+    color: '#dd4b25',
+    name: 'HTML5',
+    title: 'icon HTML5',
   },
 ]
