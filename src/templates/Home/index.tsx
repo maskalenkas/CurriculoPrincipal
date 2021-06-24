@@ -6,7 +6,7 @@ import * as S from './styles'
 
 import mockSlider from 'components/BannerSlider/mock'
 import mockAboutMe from 'components/AboutMe/mock'
-import mockSkills from 'components/Skills/mock'
+import { mock1 } from 'components/Skills/mock'
 import {
   HardSkills as mockHardSkills,
   SoftSkills as mockSoftSkills,
@@ -48,7 +48,7 @@ const Home = () => (
       </S.TitleWrapper>
 
       <Container>
-        <Skills items={mockSkills} />
+        <Skills items={mock1} />
       </Container>
     </S.SectionConhecimentos>
     {/* / Conhecimentos */}

@@ -2,13 +2,13 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import { Container } from 'components/Container'
 import Skills, { SkillsProps } from '.'
 
-import mockSkills from './mock'
+import { mock1 } from './mock'
 
 export default {
   title: 'Skills',
   component: Skills,
   args: {
-    items: mockSkills,
+    items: mock1,
   },
 } as Meta
 

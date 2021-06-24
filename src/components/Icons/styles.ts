@@ -19,7 +19,9 @@ const wrapperModifiers = {
   `,
   sizeMediaMod: (theme: DefaultTheme, sizeMedia: sizeTypes | string) => css`
     ${media.lessThan('medium')`
-      min-width: ${sizeMedia}
+      svg {
+        width: ${sizeMedia}
+      }
     `}
   `,
   marginTopMod: (theme: DefaultTheme, marginTop: string) => css`
@@ -46,7 +48,10 @@ export const Wrapper = styled.div<IconsProps>`
     Top,
     colorNoDefault,
   }) => css`
-    min-width: ${size};
+    svg {
+      width: ${size};
+    }
+
     color: ${theme.colors[color!]};
     transition: all 0.2s;
     display: inline-block;
