@@ -7,20 +7,14 @@ import { Coffee } from '@styled-icons/boxicons-solid'
 import Icons from '.'
 
 describe('<Icons />', () => {
-  it('deve testar a renderização e o media', () => {
+  it('deve testar a renderização', () => {
     const { debug, container } = renderWithTheme(
       <Icons color="primary" size="5rem" sizeMedia="2rem" title="icon coffe">
         <Coffee data-testid="icone" />
       </Icons>,
     )
 
-    screen.logTestingPlaygroundURL()
-
-    // Testando se o size normal é aplicado
     expect(screen.getByTestId('icone')).toHaveStyle({ width: '5rem' })
-
-    // Testando se stylerule é aplicado
-    expect(screen.getByTestId('icone')).toHaveStyleRule('width', '5rem')
   })
 
   it('deve testar o hover', () => {
