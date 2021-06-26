@@ -19,7 +19,7 @@ export default [
     img: '/img/pagina_netflix.png',
     title: 'Netflix',
     subtitle:
-      'projeto totalmente em HTML e JS, que visa clonar a pagina do Netflix',
+      'projeto totalmente em HTML e JS, que visa clonar a pagina após o login da Netflix.',
     buttonLabel: 'Veja!',
     buttonLink: 'https://github.com/maskalenkas/Pagina-Netflix',
   },
@@ -27,7 +27,7 @@ export default [
     img: '/img/jogo_da_memoria.png',
     title: 'Jogo da memoria',
     subtitle:
-      'projeto totalmente em HTML e JS, que visa fazer um jogo da memoria',
+      'projeto feito totalmente em HTML e JS, que visa fazer um jogo da memoria usando puramente a lógica do JS.',
     buttonLabel: 'Veja!',
     buttonLink: 'https://github.com/maskalenkas/Jogo-da-memoria',
   },
