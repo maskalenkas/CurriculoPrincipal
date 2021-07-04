@@ -21,7 +21,7 @@ const Home = () => (
   <S.Sections>
     <Container>
       <S.SectionAboutMe>
-        <AboutMe image="/img/computers.svg" data={mockAboutMe} />
+        <AboutMe image="/img/computers.svg" />
       </S.SectionAboutMe>
     </Container>
 
