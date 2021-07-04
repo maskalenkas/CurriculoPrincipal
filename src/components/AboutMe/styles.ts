@@ -54,29 +54,8 @@ export const Column = styled.div<ColumnProps>`
   `}
 `
 
-export const Data = styled.div`
-  ${({ theme }) => css`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    & ${HeadingStyles.Wrapper}:first-child {
-      width: 8rem;
-    }
-
-    ${media.lessThan('medium')`
-    grid-template-columns: 1fr;
-
-    ${Column} {
-      margin-top: ${theme.spacings.xxsmall};
-      flex-direction: column;
-      align-items: center;
-    }
-
-    ${Column} > ${HeadingStyles.Wrapper} {
-      text-align: center;
-      line-height: 1.1;
-    `}
-  `}
+export const ColumnChildren = styled.div`
+  display: flex;
 `
 
 export const SocialLinksWrapper = styled.div`

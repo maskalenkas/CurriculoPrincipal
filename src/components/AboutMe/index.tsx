@@ -1,18 +1,13 @@
 import Heading from 'components/Heading'
 import SocialLinks from 'components/SocialLinks'
-import * as S from './styles'
 
-export type DataProps = {
-  coluna: string
-  data: string
-}
+import * as S from './styles'
 
 export type AboutMeProps = {
   image?: string
-  data?: DataProps[]
 }
 
-const AboutMe = ({ image, data }: AboutMeProps) => (
+const AboutMe = ({ image }: AboutMeProps) => (
   <S.Wrapper>
     <S.Column>
       <S.Photo src={image} alt="imagem de perfil" />
@@ -43,16 +38,6 @@ const AboutMe = ({ image, data }: AboutMeProps) => (
         </Heading>
       </S.Biography>
 
-      <S.Data aria-label="Varias colunas com informações sobre o Arthur">
-        {data?.map((d) => (
-          <S.Column key={d.coluna} className="coluna">
-            <Heading asTextType="subtitle" size="medium">
-              {d.coluna}
-            </Heading>
-            <Heading asTextType="text">{d.data}</Heading>
-          </S.Column>
-        ))}
-      </S.Data>
       <S.SocialLinksWrapper>
         <Heading asTextType="subtitle">Social Links</Heading>
         <SocialLinks />

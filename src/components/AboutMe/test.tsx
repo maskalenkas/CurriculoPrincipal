@@ -6,7 +6,7 @@ import mock from './mock'
 
 describe('<AboutMe />', () => {
   it('should render the About-Me', () => {
-    const { container } = renderWithTheme(<AboutMe data={mock} />)
+    const { container } = renderWithTheme(<AboutMe />)
 
     expect(
       screen.getByRole('heading', { name: /meu nome é Arthur Maskalenkas/i }),
@@ -17,12 +17,5 @@ describe('<AboutMe />', () => {
     expect(
       screen.getByRole('heading', { name: 'Web Developer' }),
     ).toBeInTheDocument()
-
-    expect(
-      screen.getByLabelText(/Varias colunas com informações sobre o Arthur/i),
-    ).toBeInTheDocument()
-
-    // Testando se de fato tem 5 colunas
-    expect(container.querySelectorAll('.coluna')).toHaveLength(4)
   })
 })
