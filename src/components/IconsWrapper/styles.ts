@@ -36,10 +36,20 @@ const wrapperModifiers = {
 }
 
 export const Wrapper = styled.div<Omit<IconsProps, 'icon'>>`
-  ${({ theme, size, color, hoverColor, isScale, sizeMedia, relativeY }) => css`
+  ${({
+    theme,
+    size,
+    color,
+    hoverColor,
+    isScale,
+    sizeMedia,
+    relativeY,
+    colorNoDefault,
+  }) => css`
     > ${StyledIconBase} {
       width: ${size};
       color: ${theme.colors[color!]};
+      color: ${colorNoDefault};
       transition: all 0.2s;
       display: inline-block;
       position: relative;

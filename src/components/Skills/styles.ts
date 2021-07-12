@@ -72,10 +72,3 @@ export const IconWrapper = styled.div`
     }
   `}
 `
-
-export const CypressWrapper = styled(Cypress)`
-  color: #59595b;
-  & + ${HeadingStyle} {
-    padding-top: 1.7rem;
-  }
-`

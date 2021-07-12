@@ -40,6 +40,7 @@ export type IconsProps = {
   size: string | sizeTypes
   sizeMedia?: string | sizeTypes
   color?: colorTypes
+  colorNoDefault?: string
   hoverColor?: colorTypes
   isScale?: boolean
   relativeY?: string
@@ -50,6 +51,7 @@ const IconsWrapper = ({
   size,
   sizeMedia,
   color,
+  colorNoDefault,
   hoverColor,
   isScale,
   relativeY,
@@ -75,6 +77,7 @@ const IconsWrapper = ({
       size={size}
       sizeMedia={sizeMedia}
       color={color}
+      colorNoDefault={colorNoDefault}
       hoverColor={hoverColor}
       isScale={isScale}
       relativeY={relativeY}

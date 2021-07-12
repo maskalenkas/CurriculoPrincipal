@@ -1,37 +1,27 @@
 import Heading from 'components/Heading'
 import * as S from './styles'
 
-import Icons from 'components/Icons'
 import ContainerSkill from 'components/ContainerSkill'
-
-type skillList = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  icon: any
-  name: string
-  color: string
-  title: string
-}
+import IconsWrapper, { IconsProps, IconTypes } from 'components/IconsWrapper'
 
 export type SkillsProps = {
-  items: skillList[]
+  items: IconsProps[]
 }
 
 const Skills = ({ items }: SkillsProps) => (
   <ContainerSkill title="Tecnologias">
     <S.Content>
-      {items.map((item) => (
-        <S.IconWrapper key={item.name}>
-          <Icons
-            size="15rem"
-            color="red"
-            sizeMedia="5rem"
-            colorNoDefault={item.color}
+      {items.map((items) => (
+        <S.IconWrapper key={items.icon}>
+          <IconsWrapper
+            icon={items.icon}
+            size={items.size}
             isScale
-            title={item.title}
-          >
-            {item.icon.render()}
-          </Icons>
-          <Heading>{item.name}</Heading>
+            sizeMedia={items.sizeMedia}
+            color={items.color}
+            colorNoDefault={items.colorNoDefault}
+          />
+          <Heading>{items.icon}</Heading>
         </S.IconWrapper>
       ))}
     </S.Content>
