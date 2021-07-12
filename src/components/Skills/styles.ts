@@ -13,7 +13,7 @@ export const Content = styled.div`
   ${({ theme }) => css`
     /* Fazendo com que tenha coluna de textos e icones */
     gap: 5rem 0;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     display: grid;
     justify-items: center;
     align-items: center;
@@ -44,7 +44,7 @@ export const IconWrapper = styled.div`
 
       ${media.lessThan('medium')`
         margin-top: ${theme.spacings.xxsmall};
-        font-size: ${theme.font.sizes.medium};
+        font-size: ${theme.font.sizes.small};
         line-height: 1;
       `}
 
