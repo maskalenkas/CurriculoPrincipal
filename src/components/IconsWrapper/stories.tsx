@@ -6,38 +6,22 @@ export default {
   component: IconsWrapper,
   args: {
     size: '5rem',
+    icon: 'Javascript',
+    color: 'red',
+    hoverColor: 'black',
   },
   argTypes: {
-    icon: {
+    size: {
       type: 'check',
-      options: [
-        'Javascript',
-        'Html5',
-        'Css3',
-        'Git',
-        'ReactLogo',
-        'Bootstrap',
-        'Testinglibrary',
-        'Cypress',
-        'NextDotJs',
-        'Graphql',
-        'Storybook',
-        'Strapi',
-        'Typescript',
-      ],
+      options: ['1rem', '3rem', '6rem', '9rem'],
     },
-    color: {
+    sizeMedia: {
       type: 'check',
-      options: [
-        'green',
-        'red',
-        'primary',
-        'secondary',
-        'black',
-        'gray',
-        'darkGray',
-        'white',
-      ],
+      options: ['1rem', '3rem', '6rem', '9rem'],
+    },
+    relativeY: {
+      type: 'check',
+      options: ['1rem', '3rem', '6rem', '9rem'],
     },
   },
 } as Meta

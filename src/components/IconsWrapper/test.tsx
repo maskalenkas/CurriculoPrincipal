@@ -6,9 +6,9 @@ import IconsWrapper from '.'
 describe('<IconsWrapper />', () => {
   it('Deve renderizar o icone ', () => {
     const { debug } = renderWithTheme(
-      <IconsWrapper icon="Typescript" size="1rem" />,
+      <IconsWrapper icon="Typescript" size="1rem" hoverColor="red" />,
     )
-    debug()
+
     expect(screen.getByTitle('Typescript')).toBeInTheDocument()
   })
 })

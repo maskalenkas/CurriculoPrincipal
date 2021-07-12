@@ -37,11 +37,23 @@ export type IconTypes =
 
 export type IconsProps = {
   icon: IconTypes
-  size: string
+  size: string | sizeTypes
+  sizeMedia?: string | sizeTypes
   color?: colorTypes
+  hoverColor?: colorTypes
+  isScale?: boolean
+  relativeY?: string
 }
 
-const Icons = ({ icon, size, color }: IconsProps) => {
+const IconsWrapper = ({
+  icon,
+  size,
+  sizeMedia,
+  color,
+  hoverColor,
+  isScale,
+  relativeY,
+}: IconsProps) => {
   const IconsDefault = {
     Javascript: <Javascript title="Javascript" color="red" />,
     Html5: <Html5 title="Html5" />,
@@ -59,10 +71,17 @@ const Icons = ({ icon, size, color }: IconsProps) => {
   }
 
   return (
-    <S.Wrapper size={size} color={color}>
+    <S.Wrapper
+      size={size}
+      sizeMedia={sizeMedia}
+      color={color}
+      hoverColor={hoverColor}
+      isScale={isScale}
+      relativeY={relativeY}
+    >
       {IconsDefault[icon]}
     </S.Wrapper>
   )
 }
 
-export default Icons
+export default IconsWrapper
