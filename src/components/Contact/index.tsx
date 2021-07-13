@@ -5,18 +5,17 @@ import Icons from 'components/Icons'
 
 import { ContactCard } from '@styled-icons/fluentui-system-filled'
 import { Whatsapp } from '@styled-icons/boxicons-logos'
+import IconsWrapper from 'components/IconsWrapper'
 
 const Contact = () => (
   <S.Wrapper>
-    <Icons
+    <IconsWrapper
+      icon="ContactCard"
       color="primary"
       size="15rem"
       sizeMedia="12rem"
       isScale
-      title="icon Contact"
-    >
-      <ContactCard />
-    </Icons>
+    />
 
     <S.Content>
       <Heading
@@ -38,16 +37,13 @@ const Contact = () => (
             'https://wa.me/+55011976660220?text=Tudo%20Bem?')
         }
       >
-        <Icons
+        <IconsWrapper
+          icon="Whatsapp"
           color="green"
           size="10rem"
           sizeMedia="7rem"
-          marginTop="1.5rem"
           isScale
-          title="icon Whatsapp"
-        >
-          <Whatsapp />
-        </Icons>
+        />
       </div>
     </S.Content>
   </S.Wrapper>

@@ -19,7 +19,7 @@ export const Wrapper = styled.main`
     /* Selecionando o icone de agenda */
     ${HeadingStyles.Wrapper} {
       text-align: center;
-      margin-top: 1rem;
+      margin: 1rem 0;
     }
   `}
 `
