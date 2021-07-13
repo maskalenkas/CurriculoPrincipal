@@ -28,12 +28,7 @@ export const Wrapper = styled.div`
     `}
   `}
 `
-export const Title = styled(HeadingStyle.Wrapper)`
-  ${({ theme }) => css`
-    text-transform: uppercase;
-    color: ${theme.colors.white};
-  `}
-`
+export const Title = styled.div``
 
 // Stories
 export const DisplayStories = styled.div`

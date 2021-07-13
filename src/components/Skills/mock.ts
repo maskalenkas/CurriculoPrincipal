@@ -1,6 +1,6 @@
-import { IconsProps } from 'components/IconsWrapper'
+import { IconsProps, IconTypes } from 'components/IconsWrapper'
 
-export const mock1 = [
+export const mock1: IconsProps[] = [
   {
     icon: 'Javascript',
     colorNoDefault: '#eed941',
