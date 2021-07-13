@@ -20,6 +20,11 @@ import {
   Typescript,
 } from '@styled-icons/simple-icons'
 
+import { Coffee, Heart } from '@styled-icons/boxicons-solid'
+
+import { ContactCard } from '@styled-icons/fluentui-system-filled'
+import { Whatsapp } from '@styled-icons/boxicons-logos'
+
 export type IconTypes =
   | 'Javascript'
   | 'Html5'
@@ -34,10 +39,14 @@ export type IconTypes =
   | 'Storybook'
   | 'Strapi'
   | 'Typescript'
+  | 'Coffee'
+  | 'Heart'
+  | 'ContactCard'
+  | 'Whatsapp'
 
 export type IconsProps = {
   icon: IconTypes
-  size: string | sizeTypes
+  size?: string | sizeTypes
   sizeMedia?: string | sizeTypes
   color?: colorTypes
   colorNoDefault?: string
@@ -70,6 +79,10 @@ const IconsWrapper = ({
     Storybook: <Storybook title="Storybook" />,
     Strapi: <Strapi title="Strapi" />,
     Typescript: <Typescript title="Typescript" />,
+    Coffee: <Coffee title="Coffee" />,
+    Heart: <Heart title="Heart" />,
+    ContactCard: <ContactCard />,
+    Whatsapp: <ContactCard title="Whatsapp" />,
   }
 
   return (
