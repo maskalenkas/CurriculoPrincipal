@@ -1,13 +1,12 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 
-import { Coffee, Heart } from '@styled-icons/boxicons-solid'
-
 import * as HeadingStyles from 'components/Heading/styles'
 import media from 'styled-media-query'
+import * as IconWrapperStyles from 'components/IconsWrapper/styles'
 
 export const Wrapper = styled.footer`
   ${({ theme }) => css`
-    padding: ${theme.spacings.small};
+    padding: ${theme.spacings.xxsmall};
     background-color: ${theme.colors.primary};
     display: flex;
     flex-direction: row;
@@ -15,18 +14,25 @@ export const Wrapper = styled.footer`
     align-items: center;
     user-select: none;
 
+    ${IconWrapperStyles.Wrapper} {
+      margin: 0 0.5rem;
+    }
+
     ${media.lessThan('medium')`
-      padding: ${theme.spacings.xsmall};
+      padding: 0 .8rem;
+
+      ${IconWrapperStyles.Wrapper} {
+        margin: 0 0.2rem;
+      }
     `}
   `}
 `
 
-// O texto em si
 export const Text = styled(HeadingStyles.Wrapper)`
   ${({ theme }) => css`
     ${media.lessThan('medium')`
         text-align:center;
-        font-size: ${theme.font.sizes.xlarge}
+        font-size: ${theme.font.sizes.small}
     `}
   `}
 `

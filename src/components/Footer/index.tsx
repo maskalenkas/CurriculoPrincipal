@@ -4,30 +4,33 @@ import Heading from 'components/Heading'
 import Icons from 'components/Icons'
 
 import { Coffee, Heart } from '@styled-icons/boxicons-solid'
+import IconsWrapper from 'components/IconsWrapper'
 
 const Footer = () => (
   <S.Wrapper role="contentinfo">
-    <S.Text asTextType="text" color="white" weight="light" size="xxlarge">
-      Feito com muito, mas muito{' '}
-      <Icons
-        color="white"
-        size="3.1rem"
-        Top="-0.5rem"
-        hoverColor="black"
-        sizeMedia="2.5rem"
-      >
-        <Coffee title="Xicara de café" />
-      </Icons>{' '}
-      e{' '}
-      <Icons
-        color="white"
-        size="3.1rem"
-        Top="-0.5rem"
-        hoverColor="red"
-        sizeMedia="2.5rem"
-      >
-        <Heart title="Coração em forma de amor" />
-      </Icons>{' '}
+    <S.Text asTextType="text" color="white" weight="light" size="xlarge">
+      Feito com muito
+    </S.Text>
+    <IconsWrapper
+      icon="Coffee"
+      color="white"
+      size="2.2rem"
+      hoverColor="black"
+      sizeMedia="1.5rem"
+      relativeY="-0.2rem"
+    />
+    <S.Text asTextType="text" color="white" weight="light" size="xlarge">
+      e
+    </S.Text>
+    <IconsWrapper
+      icon="Heart"
+      color="white"
+      size="2.2rem"
+      hoverColor="red"
+      sizeMedia="1.5rem"
+      relativeY="-0.2rem"
+    />
+    <S.Text asTextType="text" color="white" weight="light" size="xlarge">
       por Arthur Maskalenkas
     </S.Text>
   </S.Wrapper>
