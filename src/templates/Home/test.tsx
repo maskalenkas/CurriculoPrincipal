@@ -4,18 +4,19 @@ import { render, screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 import Home from '.'
 
+jest.mock('components/BannerSlider', () => {
+  return {
+    __esModule: true,
+    default: function Mock() {
+      return <div data-testid="mock-bannerSlider"></div>
+    },
+  }
+})
+
 describe('<Main />', () => {
   it('deve renderizar as sessões', () => {
-    const { container } = renderWithTheme(<Home />)
+    renderWithTheme(<Home />)
 
-    expect(
-      screen.getByRole('heading', { name: /meus projetos/i }),
-    ).toBeInTheDocument()
-
-    expect(
-      screen.getByRole('heading', { name: /conhecimentos/i }),
-    ).toBeInTheDocument()
-
-    expect(screen.getByRole('heading', { name: 'Contato' })).toBeInTheDocument()
+    expect(screen.getByTestId('mock-bannerSlider')).toBeInTheDocument()
   })
 })

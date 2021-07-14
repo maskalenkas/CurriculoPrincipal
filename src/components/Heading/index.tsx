@@ -25,6 +25,7 @@ export type alignTextTypes = 'center' | 'justify' | 'start'
 
 export type HeadingProps = {
   asTextType?: asTypes
+  as?: React.ElementType
   children: React.ReactNode
   size?: sizeTypes
   color?: colorTypes
