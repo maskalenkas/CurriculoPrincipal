@@ -8,14 +8,14 @@ import media from 'styled-media-query'
 const wrapperModifiers = {
   hoverColorMod: (theme: DefaultTheme, hoverColor: colorTypes) => css`
     ${StyledIconBase} {
-      :hover {
+      &:hover {
         color: ${theme.colors[hoverColor]};
       }
     }
   `,
   scaleMod: (theme: DefaultTheme) => css`
     ${StyledIconBase} {
-      :hover {
+      &:hover {
         transform: scale(1.2);
         transition: all 0.2s;
       }
