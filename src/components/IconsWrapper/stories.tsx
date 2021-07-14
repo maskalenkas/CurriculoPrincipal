@@ -4,26 +4,36 @@ import IconsWrapper, { IconsProps } from '.'
 export default {
   title: 'IconsWrapper',
   component: IconsWrapper,
-  args: {
-    size: '5rem',
-    icon: 'Javascript',
-    color: 'red',
-    hoverColor: 'black',
-  },
   argTypes: {
     size: {
-      type: 'check',
-      options: ['1rem', '3rem', '6rem', '9rem'],
+      control: {
+        type: 'inline-radio',
+        options: ['1rem', '3rem', '6rem', '9rem'],
+      },
     },
     sizeMedia: {
-      type: 'check',
-      options: ['1rem', '3rem', '6rem', '9rem'],
+      control: {
+        type: 'inline-radio',
+        options: ['1rem', '3rem', '6rem', '9rem'],
+      },
     },
     relativeY: {
-      type: 'check',
-      options: ['1rem', '3rem', '6rem', '9rem'],
+      control: {
+        type: 'inline-radio',
+        options: ['1rem', '3rem', '6rem', '9rem'],
+      },
+    },
+    colorNoDefault: {
+      control: 'color',
     },
   },
 } as Meta
 
 export const Default: Story<IconsProps> = (args) => <IconsWrapper {...args} />
+
+Default.args = {
+  size: '9rem',
+  icon: 'Javascript',
+  color: 'black',
+  hoverColor: 'white',
+}
