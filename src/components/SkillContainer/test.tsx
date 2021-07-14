@@ -6,6 +6,15 @@ import { HardSkills } from './mock'
 import SkillContainer from '.'
 import { renderWithTheme } from 'utils/tests/helpers'
 
+jest.mock('components/IconsWrapper', () => {
+  return {
+    __esModule: true,
+    default: function Mock() {
+      return <div data-testid="mock-iconsWrapper"></div>
+    },
+  }
+})
+
 describe('<SkillContainer />', () => {
   it('veirifica se esta renderizando tudo', () => {
     const { container } = renderWithTheme(
@@ -19,6 +28,6 @@ describe('<SkillContainer />', () => {
     expect(screen.getByText('teste')).toBeInTheDocument()
 
     // Verificando se tem 7 elementos no array
-    expect(screen.getAllByTitle(/icon checked/i)).toHaveLength(7)
+    expect(screen.getAllByTestId(/mock-iconsWrapper/i)).toHaveLength(7)
   })
 })

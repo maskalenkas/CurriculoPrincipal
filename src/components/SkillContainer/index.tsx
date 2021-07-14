@@ -1,33 +1,25 @@
-import Heading from 'components/Heading'
 import * as S from './styles'
 
-import { Check } from '@styled-icons/boxicons-regular'
-import Icons from 'components/Icons'
 import ContainerSkill from 'components/ContainerSkill'
-
-type skillList = {
-  skill: string
-}
+import IconsWrapper from 'components/IconsWrapper'
 
 export type SkillContainerProps = {
   title: string
-  items: skillList[]
+  items: string[]
 }
 
 const SkillContainer = ({ title, items }: SkillContainerProps) => (
   <ContainerSkill title={title}>
     <S.List>
       {items.map((item) => (
-        <S.ListItemIconWrapper key={item.skill}>
-          <Icons
+        <S.ListItemIconWrapper key={item}>
+          <IconsWrapper
+            icon="Checked"
             size="2.8rem"
             color="green"
-            marginTop="-0.5rem"
-            title="icon Checked"
-          >
-            <Check />
-          </Icons>
-          <S.ListItem>{item.skill}</S.ListItem>
+            relativeY="-0.5rem"
+          />
+          <S.ListItem>{item}</S.ListItem>
         </S.ListItemIconWrapper>
       ))}
     </S.List>

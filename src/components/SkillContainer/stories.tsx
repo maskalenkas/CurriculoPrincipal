@@ -12,6 +12,22 @@ export default {
     title: 'Titulo',
     items: mockSkills,
   },
+  argTypes: {
+    items: {
+      control: {
+        type: 'check',
+        options: [
+          'Testes unitarios',
+          'Testes E2E',
+          'Estruturação de um projeto escalavel',
+          'Webhooks',
+          'Rotas simples e dinamicas em NextJs',
+          'SSG, SSR, SPA',
+          'Criar APIS rapidamente com Strapi',
+        ],
+      },
+    },
+  },
 } as Meta
 
 export const Default: Story<SkillContainerProps> = (args) => (
