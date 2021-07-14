@@ -20,6 +20,7 @@ export type IconTypes =
   | 'Heart'
   | 'ContactCard'
   | 'Whatsapp'
+  | 'Checked'
 
 export type IconsProps = {
   icon: IconTypes

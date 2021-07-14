@@ -1,6 +1,3 @@
-import { colorTypes, sizeTypes } from 'components/Heading'
-import * as S from './styles'
-
 import {
   Javascript,
   Html5,
@@ -19,6 +16,8 @@ import {
   Strapi,
   Typescript,
 } from '@styled-icons/simple-icons'
+
+import { Check } from '@styled-icons/boxicons-regular'
 
 import { Coffee, Heart } from '@styled-icons/boxicons-solid'
 
@@ -43,4 +42,5 @@ export const IconsDefault = {
   Heart: <Heart title="Heart" />,
   ContactCard: <ContactCard />,
   Whatsapp: <Whatsapp title="Whatsapp" />,
+  Checked: <Check title="Checked" />,
 }
