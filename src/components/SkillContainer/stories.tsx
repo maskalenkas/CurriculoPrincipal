@@ -8,10 +8,6 @@ import * as S from './styles'
 export default {
   title: 'SkillContainer',
   component: SkillContainer,
-  args: {
-    title: 'Titulo',
-    items: mockSkills,
-  },
   argTypes: {
     items: {
       control: {
@@ -35,3 +31,8 @@ export const Default: Story<SkillContainerProps> = (args) => (
     <SkillContainer {...args} />
   </Container>
 )
+
+Default.args = {
+  title: 'Titulo',
+  items: mockSkills,
+}

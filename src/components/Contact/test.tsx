@@ -1,16 +1,22 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 import '../../../setupTests'
 
-import * as StyledIcons from 'components/Contact/styles'
+jest.mock('components/IconsWrapper', () => {
+  return {
+    __esModule: true,
+    default: function Mock() {
+      return <div data-testid="mock-icons"></div>
+    },
+  }
+})
 
 import Contact from '.'
 
 describe('<Contact />', () => {
   it('deve renderizar o componente, com os icones', () => {
-    const { container } = renderWithTheme(<Contact />)
+    renderWithTheme(<Contact />)
 
-    expect(screen.getByTitle(/icon Whatsapp/i)).toBeInTheDocument()
-    expect(screen.getByTitle(/icon Contact/i)).toBeInTheDocument()
+    expect(screen.getAllByTestId('mock-icons')).toHaveLength(2)
   })
 })

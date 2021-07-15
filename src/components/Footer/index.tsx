@@ -1,9 +1,5 @@
 import * as S from './styles'
 
-import Heading from 'components/Heading'
-import Icons from 'components/Icons'
-
-import { Coffee, Heart } from '@styled-icons/boxicons-solid'
 import IconsWrapper from 'components/IconsWrapper'
 
 const Footer = () => (

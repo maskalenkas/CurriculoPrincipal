@@ -1,10 +1,4 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import media from 'styled-media-query'
-
-import { StyledIconBase } from '@styled-icons/styled-icon'
-
-import { ContactCard } from '@styled-icons/fluentui-system-filled'
-import { Whatsapp } from '@styled-icons/boxicons-logos'
 
 import * as HeadingStyles from 'components/Heading/styles'
 

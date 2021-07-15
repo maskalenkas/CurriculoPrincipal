@@ -1,5 +1,5 @@
 import '../../../setupTests'
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 
 import { HardSkills } from './mock'
 
@@ -17,9 +17,7 @@ jest.mock('components/IconsWrapper', () => {
 
 describe('<SkillContainer />', () => {
   it('veirifica se esta renderizando tudo', () => {
-    const { container } = renderWithTheme(
-      <SkillContainer items={HardSkills} title="teste" />,
-    )
+    renderWithTheme(<SkillContainer items={HardSkills} title="teste" />)
 
     // Verificando se foi renderizado
     expect(screen.getByText(/testes unitarios/i)).toBeInTheDocument()
