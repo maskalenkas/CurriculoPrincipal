@@ -29,7 +29,7 @@ const SocialLinks = () => (
       <span>Whatsapp</span>
     </S.IconWrapper>
 
-    <S.IconWrapper as="a" href="https://github.com/maskalenkas">
+    <S.IconWrapper as="a" href="https://github.com/Arthur-Maskalenkas">
       <Github aria-label="icone do Github" />
       <span>GitHub</span>
     </S.IconWrapper>
